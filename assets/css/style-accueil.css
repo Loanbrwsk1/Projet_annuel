@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(90deg,rgba(0, 154, 214, 1) 0%, rgba(39, 64, 163, 1) 50%, rgba(210, 0, 247, 1) 100%);
+    background: linear-gradient(90deg, rgba(0, 154, 214, 1) 0%, rgba(39, 64, 163, 1) 50%, rgba(210, 0, 247, 1) 100%);
     background-attachment: fixed;
     background-size: cover;
     display: flex;
@@ -35,8 +35,12 @@ body {
 }
 
 .account {
-    height: 75px;
-    width: 75px;
+    width: 80px;
+    margin-right: 0;
+}
+
+.account-logo-container {
+    width: fit-content;
 }
 
 
@@ -48,4 +52,3 @@ footer {
     justify-items: center;
     padding-top: 10px;
 }
-

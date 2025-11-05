@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+
+  <defs>
+    <!-- Glow cyan -->
+    <filter id="glow-cyan" x="-300%" y="-300%" width="600%" height="600%">
+      <feGaussianBlur stdDeviation="25" result="g1"></feGaussianBlur>
+      <feGaussianBlur stdDeviation="55" result="g2"></feGaussianBlur>
+      <feGaussianBlur stdDeviation="90" result="g3"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="g3"></feMergeNode>
+        <feMergeNode in="g2"></feMergeNode>
+        <feMergeNode in="g1"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <!-- Glow pink -->
+    <filter id="glow-pink" x="-300%" y="-300%" width="600%" height="600%">
+      <feGaussianBlur stdDeviation="20" result="p1"></feGaussianBlur>
+      <feGaussianBlur stdDeviation="45" result="p2"></feGaussianBlur>
+      <feGaussianBlur stdDeviation="80" result="p3"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="p3"></feMergeNode>
+        <feMergeNode in="p2"></feMergeNode>
+        <feMergeNode in="p1"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <!-- Dark inner halo -->
+    <radialGradient id="inner">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.55"></stop>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"></stop>
+    </radialGradient>
+  </defs>
+
+  <!-- Inner halo -->
+  <circle cx="300" cy="300" r="160" fill="url(#inner)"></circle>
+
+  <!-- Neon circle -->
+  <circle cx="300" cy="300" r="150" stroke="#00F5FF" stroke-width="10" fill="none" filter="url(#glow-cyan)"></circle>
+
+  <!-- PERFECTLY CENTERED HASHTAG -->
+  <g filter="url(#glow-pink)">
+    <text x="300" y="300" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="205" text-anchor="middle" dominant-baseline="central" fill="#FF1AA8" style="letter-spacing:-10px;">#</text>
+  </g>
+
+  <!-- NEON -->
+  <g filter="url(#glow-cyan)">
+    <text x="500" y="250" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="120" fill="#00F5FF">NEON</text>
+  </g>
+
+  <!-- QUESTS -->
+  <g filter="url(#glow-pink)">
+    <text x="500" y="370" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="120" fill="#FF1AA8">QUESTS</text>
+  </g>
+
+</svg>
