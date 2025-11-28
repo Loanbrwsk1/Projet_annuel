@@ -14,7 +14,7 @@
     
     <div class="top-bar">
         <div>
-            <a href="index.html">
+            <a href="index.php">
                 <img src="assets/images/neonquests_full_logo.svg" alt="neonquests-logo" class="logo">
             </a>
         </div>

@@ -24,9 +24,6 @@
                     <div class="input-type">
                         <input class="input-is" type="text" required="" placeholder="Pseudo" />
                         <input class="input-is" type="password" required="" placeholder="Mot de passe" />
-                        <a href="#" class="forget-password">
-                            Mot de passe oublié ?
-                        </a>
                         <a href="accueil.html">
                             <button class="submit">Se connecter</button>
                         </a>
@@ -37,11 +34,11 @@
         <a href="#">
             <button class="create-account-button">Créer un compte</button>
         </a>
+        <a href="accueil.php">
+            Jouer sans se connecter
+        </a>
     </form>
 
-    <a href="accueil.html">
-        accueil
-    </a>
 
 </body>
 
