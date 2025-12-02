@@ -23,11 +23,11 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
-    padding-top: 100px;
+    padding-top: 40px;
 }
 
 img {
-    width: 800px;
+    width: 550px;
 }
 
 /* From Uiverse.io by InfinityLoopGames */
@@ -40,7 +40,6 @@ img {
     background: none;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
-    
 }
 
 .submit::before {
@@ -80,7 +79,7 @@ img {
 .input-container {
     filter: drop-shadow(46px 36px 24px #4090b5) drop-shadow(-55px -40px 25px #9e30a9);
     animation: blinkShadowsFilter 8s ease-in infinite;
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 .input-content {
@@ -160,7 +159,6 @@ img {
             7% 100%,
             0 92%,
             0 0);
-    animation: backglitch 50ms linear infinite;
 }
 
 .input-dist {
@@ -231,20 +229,6 @@ img {
     color: hsla(192, 100%, 88%, 0.806);
 }
 
-@keyframes backglitch {
-    0% {
-        box-shadow: inset 0px 20px 20px 30px #212121;
-    }
-
-    50% {
-        box-shadow: inset 0px -20px 20px 30px hsl(297, 42%, 10%);
-    }
-
-    to {
-        box-shadow: inset 0px 20px 20px 30px #212121;
-    }
-}
-
 @keyframes rotate {
     0% {
         transform: rotate(0deg) translate(-50%, 20%);
@@ -283,7 +267,7 @@ img {
 
 .create-account-button {
     width: 200px;
-    margin-top: 95px;
+    margin-top: 80px;
     border: none;
     color: hsla(192, 100%, 88%, 0.806);
     background: linear-gradient(90deg,
