@@ -8,13 +8,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style-index.css">
     <title>NeonQuests</title>
+    <style>
+        html {
+            overflow: hidden;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
     <div class="image-container">
-        <div class="image">
-            <img src="assets/images/neonquests_full_logo.svg" alt="neonquests-logo">
-        </div>
+        <img src="assets/images/neonquests_full_logo.svg" alt="neonquests-logo">
     </div>
     <!-- From Uiverse.io by InfinityLoopGames -->
     <form class="container" action="">
@@ -24,7 +28,7 @@
                     <div class="input-type">
                         <input class="input-is" type="text" required="" placeholder="Pseudo" />
                         <input class="input-is" type="password" required="" placeholder="Mot de passe" />
-                        <a href="accueil.html">
+                        <a href="accueil.php">
                             <button class="submit">Se connecter</button>
                         </a>
                     </div>
@@ -38,7 +42,6 @@
             Jouer sans se connecter
         </a>
     </form>
-
 
 </body>
 

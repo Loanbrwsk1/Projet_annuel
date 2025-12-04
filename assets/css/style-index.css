@@ -12,7 +12,8 @@ body {
     background-size: cover;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .image-container {
