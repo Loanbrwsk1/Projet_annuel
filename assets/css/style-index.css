@@ -24,11 +24,11 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
-    padding-top: 40px;
+    padding-top: 80px;
 }
 
 img {
-    width: 550px;
+    width: 700px;
 }
 
 /* From Uiverse.io by InfinityLoopGames */
@@ -68,6 +68,7 @@ img {
     font-weight: bold;
     display: flex;
     margin: auto;
+    margin-top: 100px;
     aspect-ratio: 16/9;
     align-items: center;
     justify-items: center;
