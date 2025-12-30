@@ -1,0 +1,39 @@
+<?php 
+session_start();
+require 'db-config.php';
+
+try {
+    $DB = new PDO($DB_NAME, $DB_USER, $DB_PWD, $OPTIONS);
+    $username = htmlspecialchars($_POST['pseudo']);
+    $password = htmlspecialchars($_POST['password']);
+
+    $result = $DB->prepare('SELECT * FROM user WHERE pseudo = ?');
+    $result->bindValue(1, $username);
+    $result->execute();
+
+    while($data = $result->fetch(PDO::FETCH_ASSOC)) {
+        $user_db = $data['pseudo'];
+        $password_db = $data['password'];
+    }
+
+    $result->closeCursor();
+
+    if($username == $user_db && password_verify($password, $password_db)){
+        $_SESSION['pseudo'] = $username;
+        header('Location: accueil.php');
+    }
+    else if($username != $user_db){
+        $_SESSION['error'] = 'Pseudo incorrect !';
+        header('Location: index.php');
+    }
+    else if(!password_verify($password, $password_db)){
+        $_SESSION['error'] = 'Mot de passe incorrect !';
+        header('Location: index.php');
+    }
+
+} 
+catch (PDOException $e) {
+    print "Erreur :" . $e->getMessage();
+    die;
+}
+?>

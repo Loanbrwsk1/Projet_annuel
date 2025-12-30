@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -22,6 +26,7 @@
             <progress value="25" max="100"></progress>
         </div>
         <div class="account-logo-container">
+            <?= $_SESSION['pseudo'];?>
             <a href="#">
                 <img src="assets/images/neonquests_account_icon.png" alt="neonquests-account-icon" class="account">
             </a>

@@ -1,6 +1,3 @@
-<?php 
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -19,7 +16,7 @@ session_start();
         <img src="assets/images/neonquests_full_logo.svg" alt="neonquests-logo">
     </div>
     <!-- From Uiverse.io by InfinityLoopGames -->
-    <form class="container" action="connect.php" method="post">
+    <form class="container" action="create.php" method="post">
         <div class="input-container">
             <div class="input-content">
                 <div class="input-dist">
@@ -27,7 +24,7 @@ session_start();
                         <input class="input-is" type="text" required="" placeholder="Pseudo" name="pseudo" />
                         <input class="input-is" type="password" required="" placeholder="Mot de passe" name="password"/>
                         <a href="accueil.php">
-                            <button class="submit">Se connecter</button>
+                            <button class="submit">Créer un compte</button>
                         </a>
                     </div>
                 </div>
@@ -35,19 +32,14 @@ session_start();
         </div>
     </form>
     <div class="sup-button">
-        <a href="create-account.php">
-            <button class="create-account-button">Créer un compte</button>
+        <a href="index.php">
+            <button class="create-account-button">Se connecter</button>
         </a>
         <a href="accueil.php">
             Jouer sans se connecter
         </a>
     </div>
-<?php
-if(!empty($_SESSION['error'])){
-    echo "<script>alert('".$_SESSION['error']."'); </script>";
-    unset($_SESSION['error']);
-}
-?>
+
 </body>
 
 </html>
