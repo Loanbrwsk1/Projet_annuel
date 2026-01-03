@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION['pseudo'] = "Invite";
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -6,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/images/neonquests_logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style-index.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>NeonQuests</title>
 </head>
 
@@ -23,6 +27,7 @@
                     <div class="input-type">
                         <input class="input-is" type="text" required="" placeholder="Pseudo" name="pseudo" />
                         <input class="input-is" type="password" required="" placeholder="Mot de passe" name="password"/>
+                        <input class="input-is" type="password" required="" placeholder="Confirmation mot de passe" name="confirm-password"/>
                         <a href="accueil.php">
                             <button class="submit">Créer un compte</button>
                         </a>
@@ -39,7 +44,15 @@
             Jouer sans se connecter
         </a>
     </div>
-
+<?php
+if(!empty($_SESSION['error'])){
+    echo "<script>
+        window.onload = function() {
+            alert('".$_SESSION['error']."');
+        } </script>";
+    unset($_SESSION['error']);
+}
+?>
 </body>
 
 </html>

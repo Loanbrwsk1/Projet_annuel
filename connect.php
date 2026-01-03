@@ -12,17 +12,17 @@ try {
     $result->execute();
 
     while($data = $result->fetch(PDO::FETCH_ASSOC)) {
-        $user_db = $data['pseudo'];
+        $username_db = $data['pseudo'];
         $password_db = $data['password'];
     }
 
     $result->closeCursor();
 
-    if($username == $user_db && password_verify($password, $password_db)){
-        $_SESSION['pseudo'] = $username;
+    if($username == $username_db && password_verify($password, $password_db)){
+        $_SESSION['pseudo'] = $username_db;
         header('Location: accueil.php');
     }
-    else if($username != $user_db){
+    else if($username != $username_db){
         $_SESSION['error'] = 'Pseudo incorrect !';
         header('Location: index.php');
     }

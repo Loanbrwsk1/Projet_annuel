@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$_SESSION['pseudo'] = "Invite";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -9,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/images/neonquests_logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style-index.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>NeonQuests</title>
 </head>
 
@@ -25,7 +26,7 @@ session_start();
                 <div class="input-dist">
                     <div class="input-type">
                         <input class="input-is" type="text" required="" placeholder="Pseudo" name="pseudo" />
-                        <input class="input-is" type="password" required="" placeholder="Mot de passe" name="password"/>
+                        <input class="input-is" type="password" required="" placeholder="Mot de passe" name="password" id="pwd"/>
                         <a href="accueil.php">
                             <button class="submit">Se connecter</button>
                         </a>
@@ -44,10 +45,14 @@ session_start();
     </div>
 <?php
 if(!empty($_SESSION['error'])){
-    echo "<script>alert('".$_SESSION['error']."'); </script>";
+    echo "<script>
+        window.onload = function() {
+            alert('".$_SESSION['error']."');
+        } </script>";
     unset($_SESSION['error']);
 }
 ?>
+<script src="assets/javascript/script.js"></script>
 </body>
 
 </html>
