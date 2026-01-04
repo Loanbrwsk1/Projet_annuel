@@ -18,7 +18,7 @@ session_start();
     
     <div class="top-bar">
         <div>
-            <a href="index.php">
+            <a href="log-out.php">
                 <img src="assets/images/neonquests_full_logo.svg" alt="neonquests-logo" class="logo">
             </a>
         </div>
@@ -26,7 +26,7 @@ session_start();
             <progress value="25" max="100"></progress>
         </div>
         <div class="account-logo-container">
-            <?= $_SESSION['pseudo'];?>
+            <?= "<span class='pseudo'>" . $_SESSION['pseudo'] . "</span>";?>
             <a href="account.php">
                 <img src="assets/images/neonquests_account_icon.png" alt="neonquests-account-icon" class="account">
             </a>

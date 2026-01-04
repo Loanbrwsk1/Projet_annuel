@@ -20,19 +20,25 @@ try {
 
     $result = $DB->prepare('UPDATE user SET password = ? WHERE pseudo = ?');
 
-    if(password_verify($actual_pwd, $actual_pwd_db) && $password == $confirm_password){
-        $result->bindValue(1, password_hash($password, PASSWORD_BCRYPT));
-        $result->bindValue(2, $_SESSION['pseudo']);
-        $result->execute();
-        $_SESSION['error'] = "Mot de passe changé avec succès !";
-        header('Location: account.php');
+    if($_SESSION['pseudo'] != "Invité"){
+        if(password_verify($actual_pwd, $actual_pwd_db) && $password == $confirm_password){
+            $result->bindValue(1, password_hash($password, PASSWORD_BCRYPT));
+            $result->bindValue(2, $_SESSION['pseudo']);
+            $result->execute();
+            $_SESSION['error'] = "Mot de passe changé avec succès !";
+            header('Location: account.php');
+        }
+        else if(!password_verify($actual_pwd, $actual_pwd_db)){
+            $_SESSION['error'] = "Le mot de passe actuel n'est pas vérifié !";
+            header('Location: account.php');
+        }
+        else if($password != $confirm_password){
+            $_SESSION['error'] = "Les mots de passe ne correspondent pas !";
+            header('Location: account.php');
+        }
     }
-    else if(!password_verify($actual_pwd, $actual_pwd_db)){
-        $_SESSION['error'] = "Le mot de passe actuel n'est pas vérifié !";
-        header('Location: account.php');
-    }
-    else if($password != $confirm_password){
-        $_SESSION['error'] = "Les mots de passe ne correspondent pas !";
+    else{
+        $_SESSION['error'] = "Vous ne pouvez pas changer le mot de passe du compte Invité !";
         header('Location: account.php');
     }
 

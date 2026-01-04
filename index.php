@@ -1,6 +1,6 @@
-<?php 
+<?php
 session_start();
-$_SESSION['pseudo'] = "Invite";
+$_SESSION['pseudo'] = "Invité";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -11,6 +11,7 @@ $_SESSION['pseudo'] = "Invite";
     <link rel="icon" href="assets/images/neonquests_logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>NeonQuests</title>
 </head>
 
@@ -26,10 +27,13 @@ $_SESSION['pseudo'] = "Invite";
                 <div class="input-dist">
                     <div class="input-type">
                         <input class="input-is" type="text" required="" placeholder="Pseudo" name="pseudo" />
-                        <input class="input-is" type="password" required="" placeholder="Mot de passe" name="password" id="pwd"/>
-                        <a href="accueil.php">
-                            <button class="submit">Se connecter</button>
-                        </a>
+                        <div class="password-container">
+                            <input class="input-is" type="password" required="" placeholder="Confirmation mot de passe" name="password" id="password" />
+                            <button type="button" class="toggle-password" onclick="togglePwd('password')">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <button class="submit">Se connecter</button>
                     </div>
                 </div>
             </div>
@@ -43,16 +47,16 @@ $_SESSION['pseudo'] = "Invite";
             Jouer sans se connecter
         </a>
     </div>
-<?php
-if(!empty($_SESSION['error'])){
-    echo "<script>
+    <?php
+    if (!empty($_SESSION['error'])) {
+        echo "<script>
         window.onload = function() {
-            alert('".$_SESSION['error']."');
+            alert('" . $_SESSION['error'] . "');
         } </script>";
-    unset($_SESSION['error']);
-}
-?>
-<script src="assets/javascript/script.js"></script>
+        unset($_SESSION['error']);
+    }
+    ?>
+    <script src="assets/javascript/script.js"></script>
 </body>
 
 </html>
