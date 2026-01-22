@@ -28,8 +28,8 @@ $_SESSION['pseudo'] = "Invité";
                     <div class="input-type">
                         <input class="input-is" type="text" required="" placeholder="Pseudo" name="pseudo" />
                         <div class="password-container">
-                            <input class="input-is" type="password" required="" placeholder="Confirmation mot de passe" name="password" id="password" />
-                            <button type="button" class="toggle-password" onclick="togglePwd('password')">
+                            <input class="input-is" type="password" required="" placeholder="Mot de passe" name="password" id="password" />
+                            <button type="button" class="toggle-password password-field" onclick="togglePwd('password')">
                                 <i class="fa-solid fa-eye"></i>
                             </button>
                         </div>

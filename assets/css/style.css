@@ -62,6 +62,10 @@ img {
     padding: 5px 10px;
 }
 
+.password-field {
+    right: 10px;
+}
+
 .toggle-password:hover {
     color: #00F5FF;
     text-shadow: 0 0 10px #00F5FF;
