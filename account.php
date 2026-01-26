@@ -42,6 +42,20 @@ if(!isset($_SESSION['pseudo'])){
         <?= $_SESSION['pseudo'] ?>
     </div>
 
+    <div class="wrapper-confirm-delete" id="confirm-delete">
+        <div class="confirm-delete">
+            <h2>Voulez-vous vraiment supprimer votre compte ?</h2>
+            <p class="delete-info">Cette action est irréversible</p>
+            <br>
+            <div class="wrapper-button-delete">
+                <button onclick="displayConfirm()" class="non-button button-delete">Non</button>
+                <a href="delete.php">
+                    <button class="oui-button button-delete">Oui</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- From Uiverse.io by InfinityLoopGames -->
     <form class="container" action="change-pwd.php" method="post">
         <div class="input-container">
@@ -76,9 +90,9 @@ if(!isset($_SESSION['pseudo'])){
         <a href="log-out.php">
             <button class="create-account-button"><span class="log-out">Se déconnecter</span></button>
         </a>
-        <a href="delete.php">
-            <button class="create-account-button"><span class="delete-account">Supprimer mon compte</span></button>
-        </a>
+        <!--  <a href="delete.php" </a> -->
+        <button onclick="displayConfirm()" class="create-account-button"><span class="delete-account">Supprimer mon compte</span></button>
+        
     </div>
 
     <footer>
@@ -99,6 +113,6 @@ if(!isset($_SESSION['pseudo'])){
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script defer src="assets/javascript/script-account.js"></script>
 </body>
-
-</html>
+</html> 
