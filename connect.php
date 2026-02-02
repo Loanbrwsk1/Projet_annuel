@@ -7,14 +7,13 @@ try {
     $username = htmlspecialchars($_POST['pseudo']);
     $password = htmlspecialchars($_POST['password']);
 
-    $result = $DB->prepare('SELECT * FROM user WHERE pseudo = ?');
+    $result = $DB->prepare('SELECT pseudo, password FROM user WHERE pseudo = ?');
     $result->bindValue(1, $username);
     $result->execute();
+    $datas = $result->fetch(PDO::FETCH_ASSOC);
 
-    while($data = $result->fetch(PDO::FETCH_ASSOC)) {
-        $username_db = $data['pseudo'];
-        $password_db = $data['password'];
-    }
+    $username_db = $datas['pseudo'];
+    $password_db = $datas['password'];
 
     $result->closeCursor();
 

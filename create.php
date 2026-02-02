@@ -8,13 +8,12 @@ try {
     $password = htmlspecialchars($_POST['password']);
     $confirm_password = htmlspecialchars($_POST['confirm-password']);
 
-    $result = $DB->prepare('SELECT * FROM user WHERE pseudo = ?');
+    $result = $DB->prepare('SELECT pseudo FROM user WHERE pseudo = ?');
     $result->bindValue(1, $username);
     $result->execute();
+    $datas = $result->fetch(PDO::FETCH_ASSOC);
 
-    while($data = $result->fetch(PDO::FETCH_ASSOC)) {
-        $username_db = $data['pseudo'];
-    }
+    $username_db = $data['pseudo'];
 
     $result->closeCursor();
 
