@@ -15,6 +15,10 @@ body {
     min-height: 100vh;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .top-bar {
     background-color: #212121;
     display: flex;
@@ -43,6 +47,11 @@ body {
 
 .account-logo-container {
     width: fit-content;
+}
+
+.pseudo {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 footer {

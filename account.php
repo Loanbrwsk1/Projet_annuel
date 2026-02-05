@@ -30,7 +30,7 @@ if(!isset($_SESSION['pseudo'])){
             <progress value=<?= $_SESSION['progress'] ?> max="100"></progress>
         </div>
         <div class="account-logo-container">
-            <?= $_SESSION['pseudo']; ?>
+            <span class="pseudo"><?= $_SESSION['pseudo'] ?></span>
             <a href="account.php">
                 <img src="assets/images/neonquests_account_icon.png" alt="neonquests-account-icon" class="account">
             </a>
