@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION['pseudo'] = "Invité";
+$_SESSION['progress'] = 0;
 ?>
 <!DOCTYPE html>
 <html lang="fr">

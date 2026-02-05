@@ -11,18 +11,21 @@ try {
     $result = $DB->prepare('SELECT pseudo FROM user WHERE pseudo = ?');
     $result->bindValue(1, $username);
     $result->execute();
-    $datas = $result->fetch(PDO::FETCH_ASSOC);
+    $datas = $result->fetchAll(PDO::FETCH_ASSOC);
 
-    $username_db = $data['pseudo'];
+    foreach($datas as $data){
+        $username_db = $data['pseudo'];
+    }
 
     $result->closeCursor();
 
-    if(empty($username_db) && $password == $confirm_password){
+    if($username_db == "" && $password == $confirm_password){
         $result = $DB->prepare('INSERT INTO user(pseudo, password) VALUES (?, ?)');
         $result->bindValue(1, $username);
         $result->bindValue(2, password_hash($password, PASSWORD_BCRYPT));
         $result->execute();
         $_SESSION['pseudo'] = $username;
+        $_SESSION['progress'] = 0;
         header('Location: accueil.php');
     }
     else if(!empty($username_db)){

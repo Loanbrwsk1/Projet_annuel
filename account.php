@@ -27,7 +27,7 @@ if(!isset($_SESSION['pseudo'])){
             </a>
         </div>
         <div class="progress-bar">
-            <progress value="25" max="100"></progress>
+            <progress value=<?= $_SESSION['progress'] ?> max="100"></progress>
         </div>
         <div class="account-logo-container">
             <?= $_SESSION['pseudo']; ?>

@@ -7,18 +7,19 @@ try {
     $username = htmlspecialchars($_POST['pseudo']);
     $password = htmlspecialchars($_POST['password']);
 
-    $result = $DB->prepare('SELECT pseudo, password FROM user WHERE pseudo = ?');
+    $result = $DB->prepare('SELECT pseudo, password, progress FROM user WHERE pseudo = ?');
     $result->bindValue(1, $username);
     $result->execute();
     $datas = $result->fetch(PDO::FETCH_ASSOC);
 
     $username_db = $datas['pseudo'];
     $password_db = $datas['password'];
-
+    $progress_db = $datas['progress'];
     $result->closeCursor();
 
     if($username == $username_db && password_verify($password, $password_db)){
         $_SESSION['pseudo'] = $username_db;
+        $_SESSION['progress'] = $progress_db;
         header('Location: accueil.php');
     }
     else if($username != $username_db){
