@@ -1,5 +1,4 @@
 <?php
-session_start();
 $_SESSION['pseudo'] = "Invite";
 ?>
 <!DOCTYPE html>
