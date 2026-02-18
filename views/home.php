@@ -46,7 +46,7 @@
             transform: scale(0.95);
         }
 
-        .liquid_glass {
+        .box_btn {
             background-color: #212121;
             padding: 100px;
             margin-top: 50px;
@@ -74,13 +74,13 @@
         </div>
     </div>
 
-    <div class="liquid_glass">
+    <div class="box_btn">
         <button class="boutonlevel">
             LEVEL 1
         </button>
     </div>
 
-    <div class="liquid_glass">
+    <div class="box_btn">
         <button class="boutonlevel">
             LEVEL 1
         </button>

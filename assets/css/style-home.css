@@ -56,12 +56,13 @@ body::-webkit-scrollbar {
 }
 
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     background-color: #212121;
     width: 100%;
     justify-items: center;
     padding-top: 10px;
+    margin-top: 50px;
 }
 
 .progress-bar {
