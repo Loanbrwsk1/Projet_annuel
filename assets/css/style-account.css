@@ -55,8 +55,8 @@ body::-webkit-scrollbar {
 }
 
 footer {
-    position: sticky;
-    top: 100vh;
+    position: fixed;
+    bottom: 0;
     background-color: #212121;
     width: 100%;
     justify-items: center;
@@ -145,7 +145,7 @@ progress::-webkit-progress-value {
     position: fixed;
     z-index: 99999;
     top: 0;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;

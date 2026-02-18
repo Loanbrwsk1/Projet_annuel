@@ -1,8 +1,5 @@
 <?php
 session_start();
-if(!isset($_SESSION['pseudo'])){
-    header("Location: index.php");
-}
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +8,7 @@ if(!isset($_SESSION['pseudo'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/images/neonquests_logo.png">
+    <link rel="icon" href="assets/img/neonquests_logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style-account.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -22,8 +19,8 @@ if(!isset($_SESSION['pseudo'])){
 
     <div class="top-bar">
         <div>
-            <a href="accueil.php">
-                <img src="assets/images/neonquests_full_logo.svg" alt="neonquests-logo" class="logo">
+            <a href="index.php?page=home">
+                <img src="assets/img/neonquests_full_logo.svg" alt="neonquests-logo" class="logo">
             </a>
         </div>
         <div class="progress-bar">
@@ -32,13 +29,13 @@ if(!isset($_SESSION['pseudo'])){
         <div class="account-logo-container">
             <span class="pseudo"><?= $_SESSION['pseudo'] ?></span>
             <a href="account.php">
-                <img src="assets/images/neonquests_account_icon.png" alt="neonquests-account-icon" class="account">
+                <img src="assets/img/neonquests_account_icon.png" alt="neonquests-account-icon" class="account">
             </a>
         </div>
     </div>
 
     <div class="logo-account-wrapper">
-        <img src="assets/images/neonquests_account_icon.png" alt="nonquests-account-icon" class="logo-account">
+        <img src="assets/img/neonquests_account_icon.png" alt="nonquests-account-icon" class="logo-account">
         <?= $_SESSION['pseudo'] ?>
     </div>
 
@@ -49,7 +46,7 @@ if(!isset($_SESSION['pseudo'])){
             <br>
             <div class="wrapper-button-delete">
                 <button onclick="displayConfirm()" class="non-button button-delete">Non</button>
-                <a href="delete.php">
+                <a href="index.php?action=delete">
                     <button class="oui-button button-delete">Oui</button>
                 </a>
             </div>
@@ -57,7 +54,7 @@ if(!isset($_SESSION['pseudo'])){
     </div>
 
     <!-- From Uiverse.io by InfinityLoopGames -->
-    <form class="container" action="change-pwd.php" method="post">
+    <form class="container" action="index.php?action=change-pwd" method="post">
         <div class="input-container">
             <div class="input-content">
                 <div class="input-dist">
@@ -87,7 +84,7 @@ if(!isset($_SESSION['pseudo'])){
         </div>
     </form>
     <div class="sup-button">
-        <a href="log-out.php">
+        <a href="index.php?action=logout">
             <button class="create-account-button"><span class="log-out">Se déconnecter</span></button>
         </a>
         <!--  <a href="delete.php" </a> -->
@@ -109,10 +106,10 @@ if(!isset($_SESSION['pseudo'])){
         unset($_SESSION['error']);
     }
     ?>
-    <script src="assets/javascript/script.js"></script>
+    <script src="assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script defer src="assets/javascript/script-account.js"></script>
+    <script defer src="assets/js/script-account.js"></script>
 </body>
 </html> 

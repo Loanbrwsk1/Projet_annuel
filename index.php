@@ -1,63 +1,45 @@
 <?php
 session_start();
-$_SESSION['pseudo'] = "Invité";
-$_SESSION['progress'] = 0;
-?>
-<!DOCTYPE html>
-<html lang="fr">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/images/neonquests_logo.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>NeonQuests</title>
-</head>
+require "controllers/controller.php";
 
-<body>
+if(isset($_GET["page"]) && !empty($_GET["page"]) && isset($_SESSION["pseudo"]) && !empty($_SESSION["pseudo"])){
+    $page = htmlspecialchars($_GET["page"]);
+}
+else{
+    $page = "login";
+}
 
-    <div class="image-container">
-        <img src="assets/images/neonquests_full_logo.svg" alt="neonquests-logo">
-    </div>
-    <!-- From Uiverse.io by InfinityLoopGames -->
-    <form class="container" action="connect.php" method="post">
-        <div class="input-container">
-            <div class="input-content">
-                <div class="input-dist">
-                    <div class="input-type">
-                        <input class="input-is" type="text" required="" placeholder="Pseudo" name="pseudo" />
-                        <div class="password-container">
-                            <input class="input-is" type="password" required="" placeholder="Mot de passe" name="password" id="password" />
-                            <button type="button" class="toggle-password password-field" onclick="togglePwd('password')">
-                                <i class="fa-solid fa-eye"></i>
-                            </button>
-                        </div>
-                        <button class="submit">Se connecter</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
-    <div class="sup-button">
-        <a href="create-account.php">
-            <button class="create-account-button">Créer un compte</button>
-        </a>
-        <a href="accueil.php">
-            Jouer sans se connecter
-        </a>
-    </div>
-    <?php
-    if (!empty($_SESSION['error'])) {
-        echo "<script>
-        window.onload = function() {
-            alert('" . $_SESSION['error'] . "');
-        } </script>";
-        unset($_SESSION['error']);
+if(isset($_GET["action"]) && !empty($_GET["action"])){
+    if($_GET["action"] == "check-connect"){
+        CheckConnect();
     }
-    ?>
-    <script src="assets/javascript/script.js"></script>
-</body>
+    if($_GET["action"] == "check-create"){
+        CheckCreate();
+    }
+    else if($_GET["action"] == "logout"){
+        LogOut();
+    }
+    else if($_GET["action"] == "delete"){
+        CheckDelete();
+    }
+    else if($_GET["action"] == "change-pwd"){
+        CheckChangePwd();
+    }
+}
 
-</html>
+if($page == "login"){
+    DisplayLoginPage();
+}
+else if($page == "home"){
+    DisplayHome();
+}
+else if($page == "create"){
+    DisplayCreate();
+}
+else if($page == "account"){
+    DisplayAccount();
+}
+else{
+    Display404();
+}

@@ -1,6 +1,7 @@
 <?php
 session_start();
-$_SESSION['pseudo'] = "Invite";
+$_SESSION['pseudo'] = "Invité";
+$_SESSION['progress'] = 0;
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -8,7 +9,7 @@ $_SESSION['pseudo'] = "Invite";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/images/neonquests_logo.png">
+    <link rel="icon" href="assets/img/neonquests_logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -18,38 +19,32 @@ $_SESSION['pseudo'] = "Invite";
 <body>
 
     <div class="image-container">
-        <img src="assets/images/neonquests_full_logo.svg" alt="neonquests-logo">
+        <img src="assets/img/neonquests_full_logo.svg" alt="neonquests-logo">
     </div>
     <!-- From Uiverse.io by InfinityLoopGames -->
-    <form class="container" action="create.php" method="post">
+    <form class="container" action="index.php?action=check-connect" method="post">
         <div class="input-container">
             <div class="input-content">
                 <div class="input-dist">
                     <div class="input-type">
                         <input class="input-is" type="text" required="" placeholder="Pseudo" name="pseudo" />
                         <div class="password-container">
-                            <input class="input-is " type="password" required="" placeholder="Nouveau mot de passe" name="password" id="password" />
-                            <button type="button" class="toggle-password" onclick="togglePwd('password')">
+                            <input class="input-is" type="password" required="" placeholder="Mot de passe" name="password" id="password" />
+                            <button type="button" class="toggle-password password-field" onclick="togglePwd('password')">
                                 <i class="fa-solid fa-eye"></i>
                             </button>
                         </div>
-                        <div class="password-container">
-                            <input class="input-is" type="password" required="" placeholder="Confirmation mot de passe" name="confirm-password" id="confirm-password" />
-                            <button type="button" class="toggle-password" onclick="togglePwd('confirm-password')">
-                                <i class="fa-solid fa-eye"></i>
-                            </button>
-                        </div>
-                        <button class="submit">Créer un compte</button>
+                        <button class="submit">Se connecter</button>
                     </div>
                 </div>
             </div>
         </div>
     </form>
     <div class="sup-button">
-        <a href="index.php">
-            <button class="create-account-button">Se connecter</button>
+        <a href="index.php?page=create">
+            <button class="create-account-button">Créer un compte</button>
         </a>
-        <a href="accueil.php">
+        <a href="index.php?page=home">
             Jouer sans se connecter
         </a>
     </div>
@@ -62,6 +57,7 @@ $_SESSION['pseudo'] = "Invite";
         unset($_SESSION['error']);
     }
     ?>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
