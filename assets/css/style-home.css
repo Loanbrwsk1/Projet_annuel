@@ -85,12 +85,3 @@ progress::-webkit-progress-value {
     border-radius: 2px;
 }
 
-.sup-button {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 0;
-}
-
