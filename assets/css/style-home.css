@@ -27,6 +27,8 @@ body::-webkit-scrollbar {
     position: sticky;
     top: 0;
     width: 100%;
+    z-index: 1000;
+    /* Supérieur aux 99 des boutons, donc il passe devant */
 }
 
 .logo {
@@ -56,13 +58,11 @@ body::-webkit-scrollbar {
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
+    margin-top: 50px;
     background-color: #212121;
     width: 100%;
-    justify-items: center;
-    padding-top: 10px;
-    margin-top: 50px;
+    text-align: center;
+    padding: 15px 0;
 }
 
 .progress-bar {
@@ -84,49 +84,147 @@ progress::-webkit-progress-value {
     background: linear-gradient(90deg, rgba(0, 154, 214, 1) 0%, rgba(39, 64, 163, 1) 50%, rgba(210, 0, 247, 1) 100%);
     border-radius: 2px;
 }
+
 .box_btn {
     display: flex;
-    margin-bottom: 15px; /* espace vertical */
-    position: relative; /* Indispensable pour l'onglet */
+    margin-bottom: 15px;
+    /* espace vertical */
+    position: relative;
+    /* Indispensable pour l'onglet */
     background-color: #1a1a1a;
     border-radius: 15px;
-     padding: 50px 20px;
-    margin-top: 50px; /* Espace pour laisser l'onglet dépasser */
+    padding: 50px 20px;
+    margin-top: 50px;
+    /* Espace pour laisser l'onglet dépasser */
 }
+
 .box_btn_1 {
     display: flex;
-    margin-bottom: 15px; /* espace vertical */
+    margin-bottom: 15px;
+    /* espace vertical */
 }
+
 .line {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .line line {
-  stroke: white;
-  stroke-width: 5;
-  stroke-dasharray: 10 10; /* pointillés */
+    stroke: white;
+    stroke-width: 5;
+    stroke-dasharray: 10 10;
+    /* pointillés */
 }
+
 .box_btn {
-  position: relative; /* Indispensable pour l'onglet */
-  background-color: #1a1a1a;
-  border-radius: 15px;
-  padding: 50px 20px;
-  margin-top: 50px; /* Espace pour laisser l'onglet dépasser */
+    position: relative;
+    /* Indispensable pour l'onglet */
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    padding: 50px 20px;
+    margin-top: 50px;
+    /* Espace pour laisser l'onglet dépasser */
 }
 
 .onglet-titre {
-  position: absolute;
-  top: -30px; /* On le fait monter de la moitié de sa hauteur environ */
-  right: 74%;  
-  background-color: #212121;
-  color: white;
-  padding: 5px 40px;
-  border-radius: 8px 8px 0 0; /* Arrondis uniquement en haut */
-  
-  font-family: sans-serif;
-  font-size: 17px;
-  white-space: nowrap; /* Évite que le texte saute à la ligne */
+    position: absolute;
+    top: -30px;
+    /* On le fait monter de la moitié de sa hauteur environ */
+    right: 74%;
+    background-color: #212121;
+    color: white;
+    padding: 5px 40px;
+    border-radius: 8px 8px 0 0;
+    /* Arrondis uniquement en haut */
+
+    font-family: sans-serif;
+    font-size: 17px;
+    white-space: nowrap;
+    /* Évite que le texte saute à la ligne */
+}
+
+
+.boutonlevel {
+    width: 155px;
+    height: 150px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 17px;
+    border-radius: 50%;
+    border: none;
+    position: relative;
+    top: 80px;
+    background: inherit;
+    transition: 0.1s;
+    background: linear-gradient(90deg,
+            rgba(0, 154, 214, 1) 0%,
+            rgba(39, 64, 163, 1) 50%,
+            rgba(210, 0, 247, 1) 100%);
+    background-attachment: fixed;
+    overflow: hidden;
+    z-index: 99;
+}
+
+.boutonlevel1 {
+    width: 155px;
+    height: 150px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 17px;
+    border-radius: 50%;
+    border: none;
+    position: relative;
+    top: -80px;
+    background: inherit;
+    transition: 0.1s;
+    background: linear-gradient(90deg,
+            rgba(0, 154, 214, 1) 0%,
+            rgba(39, 64, 163, 1) 50%,
+            rgba(210, 0, 247, 1) 100%);
+    background-attachment: fixed;
+    overflow: hidden;
+    z-index: 99;
+}
+
+.boutonlevel::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    filter: blur(15px);
+    z-index: -1;
+    position: absolute;
+
+}
+
+.boutonlevel1::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    filter: blur(15px);
+    z-index: -1;
+    position: relative;
+
+}
+
+.boutonlevel:active {
+    transform: scale(0.95);
+}
+
+.boutonlevel1:active {
+    transform: scale(0.95);
+}
+
+.box_btn {
+    background-color: #212121;
+    padding: 100px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 20px;
+    gap: 80px;
+
 }
