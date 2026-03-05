@@ -52,14 +52,13 @@
         <button class="boutonlevel1">
             LEVEL 4
         </button>
-<<<<<<< Updated upstream
         <svg class="line">
             <line x1="920" y1="110" x2="740" y2="-30" />
         </svg>
-=======
+
             <svg class="line">
         <line x1="1020" y1="170" x2="780" y2="-60" />            </svg>
->>>>>>> Stashed changes
+
         <button class="boutonlevel">
             LEVEL 5
         </button>
@@ -90,20 +89,19 @@
         <button class="boutonlevel1">
             LEVEL 4
         </button>
-<<<<<<< Updated upstream
+
         <svg class="line">
             <line x1="920" y1="110" x2="740" y2="-30" />
         </svg>
-=======
+
             <svg class="line">
             <line x1="1020" y1="170" x2="780" y2="-60" />
             </svg>
->>>>>>> Stashed changes
+
         <button class="boutonlevel">
             LEVEL 5
         </button>
     </div>
-<<<<<<< Updated upstream
     <div class="box_btn">
         <div class="onglet-titre">thème 3 : je mange des pâtes</div>
         <button class="boutonlevel">
@@ -197,9 +195,8 @@
         </button>
 
     </div>
-=======
+
     
->>>>>>> Stashed changes
 
     <footer>
         <p>NeonQuests</p>
