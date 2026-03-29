@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+RewriteRule ^home$ index.php?page=home [L]
+RewriteRule ^account$ index.php?page=account [L]
+RewriteRule ^login$ index.php?page=login [L]
+RewriteRule ^create$ index.php?page=create [L]

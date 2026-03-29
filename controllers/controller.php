@@ -14,7 +14,7 @@ function CheckConnect()
 {
     require "models/model.php";
     if(Connect()){
-        header("Location: index.php?page=home");
+        header("Location: home");
         exit();
     }
     else{
@@ -37,11 +37,11 @@ function CheckCreate()
 {
     require_once "models/model.php";
     if(Create()){
-        header("location: index.php?page=home");
+        header("location: home");
         exit();
     }
     else{
-        header("Location: index.php?page=create");
+        header("Location: create");
         exit();
     }
 }
@@ -51,7 +51,7 @@ function LogOut()
     session_start();
     unset($_SESSION['pseudo']);
     session_destroy();
-    header("location: index.php?page=login");
+    header("location: login");
     exit();
 }
 
@@ -64,11 +64,11 @@ function CheckDelete()
 {
     require_once "models/model.php";
     if(Delete()){
-        header("Location: index.php?page=login");
+        header("Location: login");
         exit();
     }
     else{
-        header("Location: index.php?page=account");
+        header("Location: account");
         exit();
     }
 }
@@ -77,6 +77,6 @@ function CheckChangePwd()
 {
     require_once "models/model.php";
     ChangePwd();
-    header("Location: index.php?page=account");
+    header("Location: account");
     exit();
 }

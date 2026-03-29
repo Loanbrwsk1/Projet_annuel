@@ -23,180 +23,228 @@
         </div>
         <div class="account-logo-container">
             <span class='pseudo'><?= $_SESSION['pseudo'] ?></span>
-            <a href="index.php?page=account">
+            <a href="account">
                 <img src="assets/img/neonquests_account_icon.png" alt="neonquests-account-icon" class="account">
             </a>
         </div>
     </div>
 
     <div class="box_btn">
-        <div class="onglet-titre">thème 1 : je mange des pâtes</div>
+        <div class="onglet-titre">Thème 1 : HTML - CSS - JavaScript (web)</div>
         <button class="boutonlevel">
             LEVEL 1
         </button>
         <svg class="line">
-            <line x1="130" y1="110" x2="240" y2="40" />
+            <line x1="220" y1="270" x2="500" y2="120" />
         </svg>
         <button class="boutonlevel1">
             LEVEL 2
         </button>
         <svg class="line">
-            <line x1="480" y1="110" x2="240" y2="-60" />
+            <line x1="630" y1="120" x2="860" y2="240" />
         </svg>
         <button class="boutonlevel">
             LEVEL 3
         </button>
         <svg class="line">
-            <line x1="580" y1="110" x2="740" y2="0" />
+            <line x1="990" y1="240" x2="1230" y2="120" />
         </svg>
         <button class="boutonlevel1">
             LEVEL 4
         </button>
         <svg class="line">
-            <line x1="920" y1="110" x2="740" y2="-30" />
+            <line x1="1350" y1="130" x2="1590" y2="240" />            
         </svg>
-
-            <svg class="line">
-        <line x1="1020" y1="170" x2="780" y2="-60" />            </svg>
-
         <button class="boutonlevel">
             LEVEL 5
         </button>
-
     </div>
 
-    </div>
     <div class="box_btn">
-        <div class="onglet-titre">thème 2 : je mange des pâtes</div>
+        <div class="onglet-titre">Thème 2 : VBA/Excel</div>
         <button class="boutonlevel">
             LEVEL 1
         </button>
         <svg class="line">
-            <line x1="130" y1="110" x2="240" y2="40" />
+            <line x1="220" y1="270" x2="500" y2="120" />
         </svg>
         <button class="boutonlevel1">
             LEVEL 2
         </button>
         <svg class="line">
-            <line x1="480" y1="110" x2="240" y2="-60" />
+            <line x1="630" y1="120" x2="860" y2="240" />
         </svg>
         <button class="boutonlevel">
             LEVEL 3
         </button>
         <svg class="line">
-            <line x1="580" y1="110" x2="740" y2="0" />
+            <line x1="990" y1="240" x2="1230" y2="120" />
         </svg>
         <button class="boutonlevel1">
             LEVEL 4
         </button>
-
         <svg class="line">
-            <line x1="920" y1="110" x2="740" y2="-30" />
+            <line x1="1350" y1="130" x2="1590" y2="240" />            
         </svg>
-
-            <svg class="line">
-            <line x1="1020" y1="170" x2="780" y2="-60" />
-            </svg>
-
         <button class="boutonlevel">
             LEVEL 5
         </button>
     </div>
+
     <div class="box_btn">
-        <div class="onglet-titre">thème 3 : je mange des pâtes</div>
+        <div class="onglet-titre">Thème 3 : Langage C</div>
         <button class="boutonlevel">
             LEVEL 1
         </button>
         <svg class="line">
-            <line x1="130" y1="110" x2="240" y2="40" />
+            <line x1="220" y1="270" x2="500" y2="120" />
         </svg>
         <button class="boutonlevel1">
             LEVEL 2
         </button>
         <svg class="line">
-            <line x1="480" y1="110" x2="240" y2="-60" />
+            <line x1="630" y1="120" x2="860" y2="240" />
         </svg>
         <button class="boutonlevel">
             LEVEL 3
         </button>
         <svg class="line">
-            <line x1="580" y1="110" x2="740" y2="0" />
+            <line x1="990" y1="240" x2="1230" y2="120" />
         </svg>
         <button class="boutonlevel1">
             LEVEL 4
         </button>
         <svg class="line">
-            <line x1="920" y1="110" x2="740" y2="-30" />
+            <line x1="1350" y1="130" x2="1590" y2="240" />            
         </svg>
         <button class="boutonlevel">
             LEVEL 5
         </button>
-
     </div>
+
     <div class="box_btn">
-        <div class="onglet-titre">thème 4 : je mange des pâtes</div>
+        <div class="onglet-titre">Thème 4 : Algorithmique</div>
         <button class="boutonlevel">
             LEVEL 1
         </button>
         <svg class="line">
-            <line x1="130" y1="110" x2="240" y2="40" />
+            <line x1="220" y1="270" x2="500" y2="120" />
         </svg>
         <button class="boutonlevel1">
             LEVEL 2
         </button>
         <svg class="line">
-            <line x1="480" y1="110" x2="240" y2="-60" />
+            <line x1="630" y1="120" x2="860" y2="240" />
         </svg>
         <button class="boutonlevel">
             LEVEL 3
         </button>
         <svg class="line">
-            <line x1="580" y1="110" x2="740" y2="0" />
+            <line x1="990" y1="240" x2="1230" y2="120" />
         </svg>
         <button class="boutonlevel1">
             LEVEL 4
         </button>
         <svg class="line">
-            <line x1="920" y1="110" x2="740" y2="-30" />
+            <line x1="1350" y1="130" x2="1590" y2="240" />            
         </svg>
         <button class="boutonlevel">
             LEVEL 5
         </button>
-
     </div>
+
     <div class="box_btn">
-        <div class="onglet-titre">thème 5 : je mange des pâtes</div>
+        <div class="onglet-titre">Thème 5 : Réseau</div>
         <button class="boutonlevel">
             LEVEL 1
         </button>
         <svg class="line">
-            <line x1="130" y1="110" x2="240" y2="40" />
+            <line x1="220" y1="270" x2="500" y2="120" />
         </svg>
         <button class="boutonlevel1">
             LEVEL 2
         </button>
         <svg class="line">
-            <line x1="480" y1="110" x2="240" y2="-60" />
+            <line x1="630" y1="120" x2="860" y2="240" />
         </svg>
         <button class="boutonlevel">
             LEVEL 3
         </button>
         <svg class="line">
-            <line x1="580" y1="110" x2="740" y2="0" />
+            <line x1="990" y1="240" x2="1230" y2="120" />
         </svg>
         <button class="boutonlevel1">
             LEVEL 4
         </button>
         <svg class="line">
-            <line x1="920" y1="110" x2="740" y2="-30" />
+            <line x1="1350" y1="130" x2="1590" y2="240" />            
         </svg>
         <button class="boutonlevel">
             LEVEL 5
         </button>
-
     </div>
 
-    
+    <div class="box_btn">
+        <div class="onglet-titre">Thème 6 : Circuit logique et architecture de l'ordinateur</div>
+        <button class="boutonlevel">
+            LEVEL 1
+        </button>
+        <svg class="line">
+            <line x1="220" y1="270" x2="500" y2="120" />
+        </svg>
+        <button class="boutonlevel1">
+            LEVEL 2
+        </button>
+        <svg class="line">
+            <line x1="630" y1="120" x2="860" y2="240" />
+        </svg>
+        <button class="boutonlevel">
+            LEVEL 3
+        </button>
+        <svg class="line">
+            <line x1="990" y1="240" x2="1230" y2="120" />
+        </svg>
+        <button class="boutonlevel1">
+            LEVEL 4
+        </button>
+        <svg class="line">
+            <line x1="1350" y1="130" x2="1590" y2="240" />            
+        </svg>
+        <button class="boutonlevel">
+            LEVEL 5
+        </button>
+    </div>
+
+    <div class="box_btn">
+        <div class="onglet-titre">Thème 7 : Linux</div>
+        <button class="boutonlevel">
+            LEVEL 1
+        </button>
+        <svg class="line">
+            <line x1="220" y1="270" x2="500" y2="120" />
+        </svg>
+        <button class="boutonlevel1">
+            LEVEL 2
+        </button>
+        <svg class="line">
+            <line x1="630" y1="120" x2="860" y2="240" />
+        </svg>
+        <button class="boutonlevel">
+            LEVEL 3
+        </button>
+        <svg class="line">
+            <line x1="990" y1="240" x2="1230" y2="120" />
+        </svg>
+        <button class="boutonlevel1">
+            LEVEL 4
+        </button>
+        <svg class="line">
+            <line x1="1350" y1="130" x2="1590" y2="240" />            
+        </svg>
+        <button class="boutonlevel">
+            LEVEL 5
+        </button>
+    </div>
 
     <footer>
         <p>NeonQuests</p>

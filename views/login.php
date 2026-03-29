@@ -40,10 +40,10 @@ $_SESSION['progress'] = 0;
         </div>
     </form>
     <div class="sup-button">
-        <a href="index.php?page=create">
+        <a href="create">
             <button class="create-account-button">Créer un compte</button>
         </a>
-        <a href="index.php?page=home">
+        <a href="home">
             Jouer sans se connecter
         </a>
     </div>

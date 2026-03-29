@@ -15,7 +15,7 @@
 
     <div class="top-bar">
         <div>
-            <a href="index.php?page=home">
+            <a href="home">
                 <img src="assets/img/neonquests_full_logo.svg" alt="neonquests-logo" class="logo">
             </a>
         </div>
@@ -24,7 +24,7 @@
         </div>
         <div class="account-logo-container">
             <span class="pseudo"><?= $_SESSION['pseudo'] ?></span>
-            <a href="account.php">
+            <a href="account">
                 <img src="assets/img/neonquests_account_icon.png" alt="neonquests-account-icon" class="account">
             </a>
         </div>
