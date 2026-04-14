@@ -68,7 +68,6 @@
         <a href="http://projet.local/index.php?action=logout">
             <button class="create-account-button"><span class="log-out">Se déconnecter</span></button>
         </a>
-        <!--  <a href="delete.php" </a> -->
         <button onclick="displayConfirm()" class="create-account-button"><span class="delete-account">Supprimer mon compte</span></button>
         
     </div>
@@ -85,9 +84,5 @@
     }
     ?>
     <script src="/assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-    <script defer src="assets/js/script-account.js"></script>
 </body>
 </html> 
