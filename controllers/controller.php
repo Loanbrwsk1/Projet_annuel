@@ -25,6 +25,8 @@ function CheckConnect()
 
 function DisplayHome()
 {
+    require_once "models/model.php";
+    GetDisabledButton();
     require "views/home.php";
 }
 
@@ -60,6 +62,18 @@ function DisplayAccount()
     require "views/account.php";
 }
 
+function DisplayQuestion($theme, $question)
+{
+    require_once "models/model.php";
+    if(CanDoQuestion($theme, $question)){
+        require "views/questions/$theme/$question.php";
+    }
+    else{
+        header("Location: http://projet.local/home");
+        exit();
+    }
+}
+
 function CheckDelete()
 {
     require_once "models/model.php";
@@ -78,5 +92,18 @@ function CheckChangePwd()
     require_once "models/model.php";
     ChangePwd();
     header("Location: account");
+    exit();
+}
+
+function CheckAnswer($theme, $question)
+{
+    require_once "models/model.php";
+    $result = CheckAnswerDB($theme, $question);
+    if($result || $_SESSION["error"] == "Question déjà validée"){
+        header("Location: home");
+    }
+    else{
+        header("Location: question/$theme/$question");
+    }
     exit();
 }

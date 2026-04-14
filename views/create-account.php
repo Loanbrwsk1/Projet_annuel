@@ -7,20 +7,20 @@ $_SESSION['pseudo'] = "Invite";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/img/neonquests_logo.png">
+    <link rel="icon" href="/assets/img/neonquests_logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <title>NeonQuests</title>
 </head>
 
 <body>
 
     <div class="image-container">
-        <img src="assets/img/neonquests_full_logo.svg" alt="neonquests-logo">
+        <img src="/assets/img/neonquests_full_logo.svg" alt="neonquests-logo">
     </div>
     <!-- From Uiverse.io by InfinityLoopGames -->
-    <form class="container" action="index.php?action=check-create" method="post">
+    <form class="container" action="http://projet.local/index.php?action=check-create" method="post">
         <div class="input-container">
             <div class="input-content">
                 <div class="input-dist">
@@ -45,14 +45,14 @@ $_SESSION['pseudo'] = "Invite";
         </div>
     </form>
     <div class="sup-button">
-        <a href="login">
+        <a href="http://projet.local/login">
             <button class="create-account-button">Se connecter</button>
         </a>
-        <a href="home">
+        <a href="http://projet.local/home">
             Jouer sans se connecter
         </a>
     </div>
-    <script src="assets/js/script.js"></script>
+    <script src="/assets/js/script.js"></script>
     <?php
     if (!empty($_SESSION['error'])) {
         echo "<script>

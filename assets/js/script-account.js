@@ -1,5 +1,5 @@
 let confirm_delete = document.getElementById("confirm-delete");
-confirm_delete.style.display = "none"
+confirm_delete.style.display = "none";
 
 function displayConfirm()
 {

@@ -7,18 +7,25 @@
     <link rel="icon" href="/assets/img/neonquests_logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <title>NeonQuests</title>
+    <link rel="stylesheet" href="/assets/css/style-questions.css">
+    <title>SQL 4</title>
 </head>
 
 <body>
-    <div class="image-container">
-        <img src="/assets/img/neonquests_full_logo.svg" alt="neonquests-logo">
-    </div>
+    <?php require "views/top-bar.html" ?>
 
-    <div class="page-not-found-container">
-        <h1 class="page-not-found">Erreur 404 : URL Not Found</h2>
-    </div>
+
+    <?php
+    require "views/footer.html";
+
+    if (!empty($_SESSION['error'])) {
+        echo "<script>
+        window.onload = function() {
+            alert('" . $_SESSION['error'] . "');
+        } </script>";
+        unset($_SESSION['error']);
+    }
+    ?>
 </body>
 
 </html>
