@@ -12,24 +12,27 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-2">
+            <div class="step active">
                 <p class="question">Format de conversion pour un entier (int) ?</p>
-                <div class="options">
-                    <button class="choice" data-correct="true" onclick="checkAnswer(this, 2)">%d</button>
-                    <button class="choice" onclick="checkAnswer(this, 2)">%f</button>
-                    <button class="choice" onclick="checkAnswer(this, 2)">%s</button>
-                    <button class="choice" onclick="checkAnswer(this, 2)">%c</button>
-                </div>
+                <form action="http://projet.local/index.php?action=check-answer&theme=3&question=2" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">%d</input></label>
+                        <label><input type="radio" name="answer" value="ans2">%f</input></label>
+                        <label><input type="radio" name="answer" value="ans3">%s</input></label>
+                        <label><input type="radio" name="answer" value="ans4">%c</input></label>
+                        <button type="submit" class="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

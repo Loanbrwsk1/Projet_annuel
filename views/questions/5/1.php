@@ -12,24 +12,27 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-1">
+            <div class="step active">
                 <p class="question">Combien de bits contient une adresse IPv4 standard ?</p>
-                <div class="options">
-                    <button class="choice" onclick="checkAnswer(this, 1)">16 bits</button>
-                    <button class="choice" data-correct="true" onclick="checkAnswer(this, 1)">32 bits</button>
-                    <button class="choice" onclick="checkAnswer(this, 1)">64 bits</button>
-                    <button class="choice" onclick="checkAnswer(this, 1)">128 bits</button>
-                </div>
+                <form action="http://projet.local/index.php?action=check-answer&theme=5&question=1" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">16 bits</label>
+                        <label><input type="radio" name="answer" value="ans2">32 bits</label>
+                        <label><input type="radio" name="answer" value="ans3">64 bits</label>
+                        <label><input type="radio" name="answer" value="ans4">128 bits</label>
+                        <button type="submit" class="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

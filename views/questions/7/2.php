@@ -12,27 +12,27 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-2">
+            <div class="step active">
                 <p class="question">Que trouve-t-on principalement dans le dossier /etc sous Linux ?</p>
-                <div class="options">
-                    <button class="choice" onclick="checkAnswer(this, 2)">Les fichiers temporaires du système</button>
-                    <button class="choice" onclick="checkAnswer(this, 2)">Les binaires et exécutables des
-                        utilisateurs</button>
-                    <button class="choice" data-correct="true" onclick="checkAnswer(this, 2)">Les fichiers de
-                        configuration du système et des services</button>
-                    <button class="choice" onclick="checkAnswer(this, 2)">Les dossiers personnels des utilisateurs
-                        (Home)</button>
-                </div>
+                <form action="http://projet.local/index.php?action=check-answer&theme=7&question=2" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">Les fichiers temporaires du système</label>
+                        <label><input type="radio" name="answer" value="ans2">Les binaires et exécutables des utilisateurs</label>
+                        <label><input type="radio" name="answer" value="ans3">Les fichiers de configuration du système et des services</label>
+                        <label><input type="radio" name="answer" value="ans4">Les dossiers personnels des utilisateurs (Home)</label>
+                        <button type="submit" class="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

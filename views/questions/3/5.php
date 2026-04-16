@@ -12,30 +12,32 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-5">
-                <p class="question">5. Le reste de la division de 17 par 5 (3 erreurs)</p>
-                <div class="input-zone vba-style">
-                    <pre>
+            <div class="step active">
+                <p class="question">5. Le reste de la division de 17 par 5</p>
+                <form action="http://projet.local/index.php?action=check-answer&theme=3&question=5" method="post">
+                    <div class="input-zone vba-style">
+                        <pre>
 int reste;
-reste = 17 <input type="text" id="answer-input-5-1" style="width: 30px;"> 5; 
-printf(%<input type="text" id="answer-input-5-2" style="width: 80px;">, <input type="text" id="answer-input-5-3" style="width: 60px;">);</pre>
-                </div>
-                <button class="choice" onclick="checkMultipleAnswer(5, ['%', 'd', 'reste'])">Vérifier</button>
+reste = 17 <input type="text" name="answer" required style="width: 20px;"> 5; 
+printf(%<input type="text" name="answer2" required style="width: 20px;">, <input type="text" name="answer3" required style="width: 50px;">);</pre>
+                    </div>
+                    <button type="submit" class="submit">Envoyer</button>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>
         window.onload = function() {
-            alert('" . $_SESSION['error'] . "');
+            alert(" . json_encode($_SESSION['error']) . ");
         } </script>";
         unset($_SESSION['error']);
     }

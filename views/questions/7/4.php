@@ -12,28 +12,27 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-4">
+            <div class="step active">
                 <p class="question">À quoi sert la commande sudo ?</p>
-                <div class="options">
-                    <button class="choice" onclick="checkAnswer(this, 4)">À redémarrer le système
-                        immédiatement.</button>
-                    <button class="choice" onclick="checkAnswer(this, 4)">À installer automatiquement des nouveaux
-                        logiciels</button>
-                    <button class="choice" onclick="checkAnswer(this, 4)">À sécuriser la connexion réseau entre deux
-                        serveurs</button>
-                    <button class="choice" data-correct="true" onclick="checkAnswer(this, 4)">À exécuter une commande en
-                        tant qu'un autre utilisateur (souvent root)</button>
-                </div>
+                <form action="http://projet.local/index.php?action=check-answer&theme=7&question=4" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">À redémarrer le système immédiatement.</label>
+                        <label><input type="radio" name="answer" value="ans2">À exécuter une commande en tant que root</label>
+                        <label><input type="radio" name="answer" value="ans3">À sécuriser la connexion réseau entre deux serveurs</label>
+                        <label><input type="radio" name="answer" value="ans4">À exécuter une commande en tant qu'un autre utilisateur</label>
+                        <button type="submit" class="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

@@ -12,22 +12,24 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-3">
-                <p class="question">3. Soustraire ces binaires : 0b 1100 0110 - 0b 1011 0100</p>
-                <div class="input-zone">
-                    <input type="text" id="answer-input-3" placeholder="Résultat en binaire..." autocomplete="off">
-                </div>
-                <button class="choice" onclick="checkTypedAnswer(3, '0b 0001 0010')">Vérifier la soustraction</button>
+            <div class="step active">
+                <p class="question">3. Soustraire ces binaires :<br>0b 1100 0110 - 0b 1011 0100</p>
+                <form action="http://projet.local/index.php?action=check-answer&theme=6&question=3" method="post">
+                    <div class="input-zone">
+                        <input type="text" name="answer" placeholder="Ex: 0b 0000 1111" autocomplete="off">
+                    </div>
+                    <button type="submit" class="submit">Envoyer</button>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

@@ -12,28 +12,27 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-1">
+            <div class="step active">
                 <p class="question">Quel est le résultat de la commande ls -al ?</p>
-                <div class="options">
-                    <button class="choice" data-correct="true" onclick="checkAnswer(this, 1)">Afficher tous les fichiers
-                        y compris cachés de façon détaillée</button>
-                    <button class="choice" onclick="checkAnswer(this, 1)">Affiche uniquement les fichiers cachés du
-                        répertoire</button>
-                    <button class="choice" onclick="checkAnswer(this, 1)">Supprime tous les fichiers du répertoire
-                        courant</button>
-                    <button class="choice" onclick="checkAnswer(this, 1)">Liste les fichiers par ordre alphabétique
-                        inversé</button>
-                </div>
+                <form action="http://projet.local/index.php?action=check-answer&theme=7&question=1" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">Afficher tous les fichiers y compris cachés de façon détaillée</label>
+                        <label><input type="radio" name="answer" value="ans2">Affiche uniquement les fichiers cachés du répertoire</label>
+                        <label><input type="radio" name="answer" value="ans3">Supprime tous les fichiers du répertoire courant</label>
+                        <label><input type="radio" name="answer" value="ans4">Liste les fichiers par ordre alphabétique inversé</label>
+                        <button type="submit" class="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

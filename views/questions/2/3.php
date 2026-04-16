@@ -13,24 +13,27 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-3">
+            <div class="step active">
                 <p class="question">Quel type de variable stocke du texte ?</p>
-                <div class="options">
-                    <button class="choice" onclick="checkAnswer(this, 3)">Integer</button>
-                    <button class="choice" data-correct="true" onclick="checkAnswer(this, 3)">String</button>
-                    <button class="choice" onclick="checkAnswer(this, 3)">Double</button>
-                    <button class="choice" onclick="checkAnswer(this, 3)">Boolean</button>
-                </div>
+                <form action="http://projet.local/index.php?action=check-answer&theme=2&question=3" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">Integer</input></label>
+                        <label><input type="radio" name="answer" value="ans2">String</input></label>
+                        <label><input type="radio" name="answer" value="ans3">Double</input></label>
+                        <label><input type="radio" name="answer" value="ans4">Boolean</input></label>
+                        <button type="submit" class="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    
+
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

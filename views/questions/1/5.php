@@ -12,20 +12,18 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
             <div class="step active">
                 <p class="question">5. Créer un cadre autour d'un texte de 2 px et en noir (CSS)</p>
                 <form action="http://projet.local/index.php?action=check-answer&theme=1&question=5" method="post">
-
-
                     <div class="input-zone vba-style">
                         <pre>
 .encadre {
     border: </pre>
-                        <input type="text" name="answer" id="answer-input-css" autocomplete="off">
+                        <input type="text" name="answer" autocomplete="off">
                         <pre>
 }</pre>
                     </div>
@@ -36,7 +34,7 @@
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

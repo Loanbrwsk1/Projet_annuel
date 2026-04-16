@@ -12,25 +12,28 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-2">
+            <div class="step active">
                 <p class="question">Dans l'onglet CLI de Packet Tracer, quelle commande permet de passer du mode
                     "Utilisateur" (>) au mode "Privilégié" (#) ?</p>
-                <div class="options">
-                    <button class="choice" data-correct="true" onclick="checkAnswer(this, 2)">enable</button>
-                    <button class="choice" onclick="checkAnswer(this, 2)">system-view</button>
-                    <button class="choice" onclick="checkAnswer(this, 2)">configure terminal</button>
-                    <button class="choice" onclick="checkAnswer(this, 2)">login privileged</button>
-                </div>
+                <form action="http://projet.local/index.php?action=check-answer&theme=5&question=2" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">enable</label>
+                        <label><input type="radio" name="answer" value="ans2">system-view</label>
+                        <label><input type="radio" name="answer" value="ans3">configure terminal</label>
+                        <label><input type="radio" name="answer" value="ans4">login privileged</label>
+                        <button type="submit" class="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

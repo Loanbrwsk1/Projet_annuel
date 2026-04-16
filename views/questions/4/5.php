@@ -8,41 +8,43 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/style-questions.css">
-    <title>Algo 1</title>
+    <title>Algo 5</title>
 
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-5">
+            <div class="step active">
                 <p class="question">5. Échange de valeurs (Permutation)</p>
                 <div class="scenario-box">
                     Complétez les étapes pour échanger <strong>A</strong> et <strong>B</strong> en utilisant la variable
                     <strong>Temp</strong>.
                 </div>
-                <div class="input-zone vba-style">
-                    <pre>
+                <form action="http://projet.local/index.php?action=check-answer&theme=4&question=5" method="post">
+                    <div class="input-zone vba-style">
+                        <pre>
 A <- 10
 B <- 20
-Temp <- <input type="text" id="answer-input-5-1" style="width: 30px;" placeholder="?">
-A <- <input type="text" id="answer-input-5-2" style="width: 30px;" placeholder="?">
-B <- <input type="text" id="answer-input-5-3" style="width: 30px;" placeholder="?"></pre>
-                </div>
-                <button class="choice" onclick="checkMultipleAnswer(5, ['A', 'B', 'Temp'])">Valider l'échange</button>
+Temp <- <input type="text" name="answer" required style="width: 45px;" placeholder="?">
+A <- <input type="text" name="answer2" required style="width: 45px;" placeholder="?">
+B <- <input type="text" name="answer3" required style="width: 45px;" placeholder="?"></pre>
+                    </div>
+                    <button type="submit" class="submit">Envoyer</button>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>
         window.onload = function() {
-            alert('" . $_SESSION['error'] . "');
+            alert(" . json_encode($_SESSION['error']) . ");
         } </script>";
         unset($_SESSION['error']);
     }

@@ -13,29 +13,27 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-1">
+            <div class="step active">
                 <p class="question">Quelle est la différence majeure entre une variable et une constante ?</p>
-                <div class="options">
-                    <button class="choice" onclick="checkAnswer(this, 1)">Une variable prend moins de place en mémoire
-                        qu'une constante.</button>
-                    <button class="choice" onclick="checkAnswer(this, 1)">Une constante peut être modifiée par
-                        l'utilisateur, mais pas une variable.</button>
-                    <button class="choice" onclick="checkAnswer(this, 1)">Les variables sont utilisées uniquement en VBA
-                        et
-                        les constantes uniquement en C.</button>
-                    <button class="choice" data-correct="true" onclick="checkAnswer(this, 1)">Une variable peut voir sa
-                        valeur modifiée, alors qu'une constante garde la même valeur tout au long du programme.</button>
-                </div>
+                <form action="http://projet.local/index.php?action=check-answer&theme=4&question=1" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">Une variable prend moins de place en mémoire qu'une constante.</input></label>
+                        <label><input type="radio" name="answer" value="ans2">Une constante peut être modifiée par l'utilisateur, mais pas une variable.</input></label>
+                        <label><input type="radio" name="answer" value="ans3">Les variables sont utilisées uniquement en VBA et les constantes uniquement en C.</input></label>
+                        <label><input type="radio" name="answer" value="ans4">Une variable peut voir sa valeur modifiée, alors qu'une constante garde la même valeur tout au long du programme.</input></label>
+                        <button type="submit" class="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

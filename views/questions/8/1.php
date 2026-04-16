@@ -12,10 +12,27 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
+
+    <div class="quiz-wrapper">
+        <div class="quiz-container">
+            <div class="step active">
+                <p class="question">En JavaScript, quelle est la syntaxe correcte pour afficher un message d'alerte dans le navigateur ?</p>
+                <form action="http://projet.local/index.php?action=check-answer&theme=8&question=1" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">alertBox("Bonjour");</label>
+                        <label><input type="radio" name="answer" value="ans2">alert("Bonjour");</label>
+                        <label><input type="radio" name="answer" value="ans3">console.log("Bonjour");</label>
+                        <label><input type="radio" name="answer" value="ans4">msg("Bonjour");</label>
+                        <button type="submit" class="submit">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

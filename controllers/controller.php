@@ -74,6 +74,11 @@ function DisplayQuestion($theme, $question)
     }
 }
 
+function DisplayThemeFinished()
+{
+    require "views/theme_finished.php";
+}
+
 function CheckDelete()
 {
     require_once "models/model.php";
@@ -99,8 +104,14 @@ function CheckAnswer($theme, $question)
 {
     require_once "models/model.php";
     $result = CheckAnswerDB($theme, $question);
-    if($result || $_SESSION["error"] == "Question déjà validée"){
-        header("Location: home");
+    if($result){
+        if($question <= 4){
+            $question += 1;
+            header("Location: http://projet.local/question/$theme/$question");
+        }
+        else{
+            header("Location: http://projet.local/theme_finished");
+        }
     }
     else{
         header("Location: question/$theme/$question");

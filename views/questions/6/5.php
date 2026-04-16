@@ -12,23 +12,26 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-5">
+            <div class="step active">
                 <p class="question">5. Sortie d'une porte AND (A=1, B=0) suivie d'une porte NOT ?</p>
-                <div class="options">
-                    <button class="choice" onclick="checkAnswer(this, 5)">0</button>
-                    <button class="choice" data-correct="true" onclick="checkAnswer(this, 5)">1</button>
-                    <button class="choice" onclick="checkAnswer(this, 5)">Indéterminé</button>
-                </div>
+                <form action="http://projet.local/index.php?action=check-answer&theme=6&question=5" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">0</label>
+                        <label><input type="radio" name="answer" value="ans2">1</label>
+                        <label><input type="radio" name="answer" value="ans3">Indéterminé</label>
+                        <button type="submit" class="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

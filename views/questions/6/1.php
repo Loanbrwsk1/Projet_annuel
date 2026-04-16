@@ -12,22 +12,24 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-1">
+            <div class="step active">
                 <p class="question">1. Convertir le nombre décimal 80 en binaire :</p>
-                <div class="input-zone">
-                    <input type="text" id="answer-input-1" placeholder="Ex: 0b 1110 1010" autocomplete="off">
-                </div>
-                <button class="choice" onclick="checkTypedAnswer(1, '0b 0101 0000')">Vérifier la conversion</button>
+                <form action="http://projet.local/index.php?action=check-answer&theme=6&question=1" method="post">
+                    <div class="input-zone">
+                        <input type="text" name="answer" placeholder="Ex: 0b 0000 1111" autocomplete="off">
+                    </div>
+                    <button type="submit" class="submit">Envoyer</button>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

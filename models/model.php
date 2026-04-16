@@ -243,6 +243,14 @@ function CheckAnswerDB($theme, $question)
 {
     global $DB;
     $answer = htmlspecialchars($_POST['answer']);
+    $is_multiple_answers = 0;
+    if(isset($_POST["answer2"]) && !empty($_POST["answer2"]) && isset($_POST["answer3"]) && !empty($_POST["answer3"])){
+        $answer2 = htmlspecialchars($_POST["answer2"]);
+        $answer3 = htmlspecialchars($_POST["answer3"]);
+        $answer = $answer . "@" . $answer2 . "@" . $answer3;
+        $answer_split = explode("@", $answer);
+        $is_multiple_answers = 1;
+    }
 
     $SQL = 'SELECT answer, gain FROM answers WHERE theme = ? AND question = ?';
     $result = $DB->prepare($SQL);
@@ -254,6 +262,10 @@ function CheckAnswerDB($theme, $question)
 
     $answer_DB = htmlspecialchars($datas["answer"]);
     $gain = $datas["gain"];
+
+    if($is_multiple_answers){
+        $multiple_answers_split = explode("@", $answer_DB);
+    }
 
     $id_user = GetIdUser();
     $theme_column = "T" . $theme;
@@ -281,7 +293,17 @@ function CheckAnswerDB($theme, $question)
         return 1;
     }
     else if($answer != $answer_DB){
-        $_SESSION["error"] = "Mauvaise réponse";
+        if($is_multiple_answers){
+            $_SESSION["error"] = "";
+            for($i = 0 ; $i < 3 ; $i++){
+                if($answer_split[$i] != $multiple_answers_split[$i]){
+                    $_SESSION["error"] = $_SESSION["error"] . "Réponse " . $i + 1 . " fausse\n";
+                }
+            }
+        }
+        else{
+            $_SESSION["error"] = "Mauvaise réponse";
+        }
         return 0;
     }
 }

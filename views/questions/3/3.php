@@ -12,22 +12,25 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-3">
+            <div class="step active">
                 <p class="question">3. Résultat numérique de : (5 > 10) ?</p>
-                <div class="input-zone">
-                    <input type="text" id="answer-input-3" placeholder="Résultat entier..." autocomplete="off">
-                </div>
-                <button class="choice" onclick="checkTypedAnswer(3, '0')">Vérifier la logique</button>
+                <form action="http://projet.local/index.php?action=check-answer&theme=3&question=3" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">0</label>
+                        <label><input type="radio" name="answer" value="ans2">1</label>
+                        <button type="submit" class="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

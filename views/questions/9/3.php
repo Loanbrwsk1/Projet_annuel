@@ -12,11 +12,24 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
+    <div class="quiz-wrapper">
+        <div class="quiz-container">
+            <div class="step active">
+                <p class="question">3. Quelle commande permet de compter le nombre total d'étudiants ?</p>
+                <form action="http://projet.local/index.php?action=check-answer&theme=9&question=3" method="post">
+                    <div class="input-zone">
+                        <input type="text" name="answer" placeholder=" SELECT ... FROM ..." style="width:100%" autocomplete="off">
+                    </div>
+                    <button type="submit" class="submit">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

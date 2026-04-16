@@ -12,11 +12,27 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
+    <div class="quiz-wrapper">
+        <div class="quiz-container">
+            <div class="step active">
+                <p class="question">Quelle méthode permet d'ajouter un élément à la fin d'un tableau (Array) ?</p>
+                <form action="http://projet.local/index.php?action=check-answer&theme=8&question=3" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">push()</label>
+                        <label><input type="radio" name="answer" value="ans2">append()</label>
+                        <label><input type="radio" name="answer" value="ans3">insert()</label>
+                        <label><input type="radio" name="answer" value="ans4">add()</label>
+                        <button type="submit" class="choice">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

@@ -12,16 +12,34 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
+    <div class="quiz-wrapper">
+        <div class="quiz-container">
+            <div class="step active">
+                <p class="question">4. Complète la jointure pour lier 'Etudiants' et 'Notes' via 'id_etu' :</p>
+                <form action="http://projet.local/index.php?action=check-answer&theme=9&question=4" method="post">
+                    <div class="input-zone vba-style">
+                        <pre>
+SELECT Etudiants.nom, Notes.valeur 
+FROM Etudiants 
+<input type="text" name="answer" style="width: 60px;" placeholder="..."> Notes 
+<input type="text" name="answer2" style="width: 40px;" placeholder="..."> Etudiants.id_etu = Notes.id_etu<input type="text" name="answer3" style="width: 30px;" placeholder="...">
+        </pre>
+                    </div>
+                    <button type="submit" class="choice">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>
         window.onload = function() {
-            alert('" . $_SESSION['error'] . "');
+            alert(" . json_encode($_SESSION['error']) . ");
         } </script>";
         unset($_SESSION['error']);
     }

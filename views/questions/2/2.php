@@ -13,23 +13,24 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-2">
+            <div class="step active">
                 <p class="question">Quelle est la syntaxe pour attribuer la valeur 42 à la cellule B2 ?</p>
-                <div class="input-zone">
-                    <input type="text" id="answer-input-2" placeholder="Ex: Range('...').Value = ..." autocomplete="off">
-                </div>
-                <button class="choice" onclick="checkTypedAnswer(2, 'Range(\'B2\').Value = 42')">Vérifier la
-                    syntaxe</button>
+                <form action="http://projet.local/index.php?action=check-answer&theme=2&question=2" method="post">
+                    <div class="input-zone">
+                        <input type="text" name="answer" placeholder="Ex: Range(&quot...&quot).Value = ..." autocomplete="off">
+                    </div>
+                    <button type="submit" class="submit">Envoyer</button>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

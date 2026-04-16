@@ -12,22 +12,24 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-2">
-                <p class="question">2. Additionner ces binaires : 0b 1011 + 0b 1101</p>
-                <div class="input-zone">
-                    <input type="text" id="answer-input-2" placeholder="Résultat en binaire..." autocomplete="off">
-                </div>
-                <button class="choice" onclick="checkTypedAnswer(2, '0b 11 000')">Vérifier l'addition</button>
+            <div class="step active">
+                <p class="question">2. Additionner ces binaires :<br>0b 1011 + 0b 1101</p>
+                <form action="http://projet.local/index.php?action=check-answer&theme=6&question=2" method="post">
+                    <div class="input-zone">
+                        <input type="text" name="answer" placeholder="Ex: 0b 0000 1111" autocomplete="off">
+                    </div>
+                    <button type="submit" class="submit">Envoyer</button>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

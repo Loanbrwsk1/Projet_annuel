@@ -13,10 +13,3 @@ function displayConfirm()
     console.log(confirm_delete.style.display);
     confirm_delete.style.display == "none" ? confirm_delete.style.display = "flex" : confirm_delete.style.display = "none";
 }
-
-//? Home
-const disabled_button = document.querySelectorAll(".disabled");
-
-disabled_button.forEach(element => {
-    element.disabled = true;
-});

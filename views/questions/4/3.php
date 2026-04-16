@@ -13,28 +13,30 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-3">
+            <div class="step active">
                 <p class="question">3. Variable vs Constante</p>
                 <div class="scenario-box">
                     <strong>Erreur :</strong> Dans l'algorithme "CalculCercle", une ligne tente de modifier
                     <strong>PI</strong>. Pourquoi est-ce impossible ?
                 </div>
-                <div class="options">
-                    <button class="choice" onclick="checkAnswer(this, 3)">Parce que PI est un ENTIER</button>
-                    <button class="choice" data-correct="true" onclick="checkAnswer(this, 3)">Parce qu'on ne peut pas
-                        modifier une CONSTANTE</button>
-                    <button class="choice" onclick="checkAnswer(this, 3)">Parce que le rayon est déjà défini</button>
-                </div>
+                <form action="http://projet.local/index.php?action=check-answer&theme=4&question=3" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">Parce que PI est un entier</input></label>
+                        <label><input type="radio" name="answer" value="ans2">Parce qu'on ne peut pas modifier une constant</input></label>
+                        <label><input type="radio" name="answer" value="ans3">Parce que le rayon est déjà défini</input></label>
+                        <button type="submit" class="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

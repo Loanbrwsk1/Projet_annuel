@@ -12,32 +12,34 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
             <div class="step active" id="step-4">
-                <p class="question">4. Déclarez un 'double' et l'affichage (3 erreurs)</p>
-                <div class="input-zone vba-style">
-                    <pre>
+                <p class="question">4. Déclarez un 'double' et l'afficher</p>
+                <form action="http://projet.local/index.php?action=check-answer&theme=3&question=4" method="post">
+                    <div class="input-zone vba-style">
+                        <pre>
 int main() {
-    <input type="text" id="answer-input-4-1" style="width: 70px;"> pi = 3.14;
-    printf("Valeur : %<input type="text" id="answer-input-4-2" style="width: 40px;">\n", pi)<input type="text" id="answer-input-4-3" style="width: 30px;">
+    <input type="text" name="answer" required style="width: 70px;"> pi = 3.14;
+    printf("Valeur : %<input type="text" name="answer2" required style="width: 40px;">\n", pi)<input type="text" name="answer3" required style="width: 30px;">
     return 0;
 }</pre>
-                </div>
-                <button class="choice" onclick="checkMultipleAnswer(4, ['double', 'lf', ';'])">Valider le code</button>
+                    </div>
+                    <button type="submit" class="submit">Envoyer</button>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>
         window.onload = function() {
-            alert('" . $_SESSION['error'] . "');
+            alert(" . json_encode($_SESSION['error']) . ");
         } </script>";
         unset($_SESSION['error']);
     }

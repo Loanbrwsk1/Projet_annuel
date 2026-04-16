@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-5">
+            <div class="step active">
                 <p class="question">5. La structure conditionnelle</p>
 
                 <div class="scenario-box">
@@ -25,24 +25,26 @@
                     affiche "Refusé".
                 </div>
 
-                <div class="input-zone vba-style">
-                    <pre>
+                <form action="http://projet.local/index.php?action=check-answer&theme=2&question=5" method="post">
+                    <div class="input-zone vba-style">
+                        <pre>
 Sub VerifierNote()
   If Range("A1").Value >= 10 Then
     Range("B1").Value = "Admis"
-  <input type="text" id="answer-input-5" placeholder="..." style="width: 60px;"> 
+  <input type="text" name="answer" placeholder="..." style="width: 60px;"> 
     Range("B1").Value = "Refusé"
   End If
 End Sub</pre>
-                </div>
+                    </div>
 
-                <button class="choice" onclick="checkTypedAnswer(5, 'Else')">Valider le code VBA</button>
+                    <button type="submit" class="submit">Envoyer</button>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

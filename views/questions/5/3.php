@@ -12,34 +12,38 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-3">
-                <p class="question">Complète les trous de cette requête utilisée pour configurer un SSH, représentés par
-                    des "(…)" : <br>
-                    username admin password 12345<br>
-                    hostname reims<br>
-                    ip (…) esgi.fr<br>
-                    crypto key generate (…)<br>
-                    line (…) 0 4<br>
-                    transport input ssh<br>
-                    transport output ssh<br>
-                    login local</p>
-                <div class="options">
-                    <button class="choice" onclick="checkAnswer(this, 3)">domain-name , vty , rsa</button>
-                    <button class="choice" onclick="checkAnswer(this, 3)">domain name , vty , rsa</button>
-                    <button class="choice" data-correct="true" onclick="checkAnswer(this, 3)">domain-name , rsa ,
-                        vty</button>
-                    <button class="choice" onclick="checkAnswer(this, 3)">name domaine , rsa , vty</button>
-                </div>
+            <div class="step active">
+                <p class="question">Complète les trous de cette requête utilisée pour configurer un SSH, représentés par des "<strong>[...]</strong>" : <br>
+                <pre>
+username admin password 12345<br>
+hostname reims<br>
+ip <strong>[...]</strong> esgi.fr<br>
+crypto key generate <strong>[...]</strong><br>
+line <strong>[...]</strong> 0 4<br>
+transport input ssh<br>
+transport output ssh<br>
+login local
+                </pre>
+                </p>
+                <form action="http://projet.local/index.php?action=check-answer&theme=5&question=3" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">domain-name ; vty ; rsa</label>
+                        <label><input type="radio" name="answer" value="ans2">domain name ; vty ; rsa</label>
+                        <label><input type="radio" name="answer" value="ans3">domain-name ; rsa ; vty</label>
+                        <label><input type="radio" name="answer" value="ans4">name domaine ; rsa ; vty</label>
+                        <button type="submit" class="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

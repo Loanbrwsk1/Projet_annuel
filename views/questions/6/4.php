@@ -12,28 +12,27 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-4">
+            <div class="step active">
                 <p class="question">4. Quelle est la règle de sortie d'une porte logique XNOR ?</p>
-                <div class="options">
-                    <button class="choice" onclick="checkAnswer(this, 4)">Sortie à 1 si au moins une entrée est à
-                        1</button>
-                    <button class="choice" onclick="checkAnswer(this, 4)">Sortie à 1 si les entrées sont
-                        différentes</button>
-                    <button class="choice" data-correct="true" onclick="checkAnswer(this, 4)">Sortie à 1 si les entrées
-                        sont
-                        identiques (0-0 ou 1-1)</button>
-                    <button class="choice" onclick="checkAnswer(this, 4)">Sortie toujours inverse de l'entrée A</button>
-                </div>
+                <form action="http://projet.local/index.php?action=check-answer&theme=6&question=4" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">Sortie à 1 si au moins une entrée est à 1</label>
+                        <label><input type="radio" name="answer" value="ans2">Sortie à 1 si les entrées sont différentes</label>
+                        <label><input type="radio" name="answer" value="ans3">Sortie à 1 si les entrées sont identiques (0-0 ou 1-1)</label>
+                        <label><input type="radio" name="answer" value="ans4">Sortie toujours inverse de l'entrée A</label>
+                        <button type="submit" class="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

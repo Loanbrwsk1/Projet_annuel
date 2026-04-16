@@ -12,28 +12,31 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-3">
-                <p class="question">Quel est le résultat de la commande echo coucou > /tmp/coucou.txt</p>
-                <div class="options">
-                    <button class="choice" onclick="checkAnswer(this, 3)">Ajoute le mot "coucou" à la fin du fichier
-                        sans rien supprimer</button>
-                    <button class="choice" onclick="checkAnswer(this, 3)">Affiche le contenu du fichier /tmp/coucou.txt
-                        dans le terminal</button>
-                    <button class="choice" data-correct="true" onclick="checkAnswer(this, 3)">Écrase le contenu du
-                        fichier /tmp/coucou.txt et y écrit "coucou"</button>
-                    <button class="choice" onclick="checkAnswer(this, 3)">Créé un dossier nommé "coucou" dans le
-                        répertoire /tmp</button>
-                </div>
+            <div class="step active">
+                <p class="question">Quel est le résultat de la commande<br>
+                <pre>
+echo coucou > /tmp/coucou.txt
+                </pre>
+                </p>
+                <form action="http://projet.local/index.php?action=check-answer&theme=7&question=3" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">Ajoute le mot "coucou" à la fin du fichier sans rien supprimer</label>
+                        <label><input type="radio" name="answer" value="ans2">Affiche le contenu du fichier /tmp/coucou.txt dans le terminal</label>
+                        <label><input type="radio" name="answer" value="ans3">Écrase le contenu du fichier /tmp/coucou.txt et y écrit "coucou"</label>
+                        <label><input type="radio" name="answer" value="ans4">Créé un dossier nommé "coucou" dans le répertoire /tmp</label>
+                        <button type="submit" class="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

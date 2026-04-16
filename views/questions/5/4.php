@@ -12,25 +12,27 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-4">
+            <div class="step active">
                 <p class="question">Quelle est la toute dernière couche du modèle OSI (Couche 7) ?</p>
-                <div class="options">
-                    <button class="choice" onclick="checkAnswer(this, 4)">La couche Physique</button>
-                    <button class="choice" data-correct="true" onclick="checkAnswer(this, 4)">La couche
-                        Application</button>
-                    <button class="choice" onclick="checkAnswer(this, 4)">La couche Session</button>
-                    <button class="choice" onclick="checkAnswer(this, 4)">La couche Présentation</button>
-                </div>
+                <form action="http://projet.local/index.php?action=check-answer&theme=5&question=4" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">La couche Physique</label>
+                        <label><input type="radio" name="answer" value="ans2">La couche Application</label>
+                        <label><input type="radio" name="answer" value="ans3">La couche Session</label>
+                        <label><input type="radio" name="answer" value="ans4">La couche Présentation</label>
+                        <button type="submit" class="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

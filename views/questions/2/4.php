@@ -13,26 +13,28 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-4">
+            <div class="step active">
                 <p class="question">4. Utiliser la fonction RECHERCHEV</p>
                 <div class="scenario-box">
                     <strong>Scénario :</strong> Trouve le prix de l'article <strong>D2</strong> dans le tableau
                     <strong>A2:B10</strong>.
                 </div>
-                <div class="input-zone vba-style">
-                    <pre>=RECHERCHEV(D2; A2:B10; <input type="text" id="answer-input-4" placeholder="..." style="width: 40px;"> ; FAUX)</pre>
-                </div>
-                <button class="choice" onclick="checkTypedAnswer(4, '2')">Valider la formule</button>
+                <form action="http://projet.local/index.php?action=check-answer&theme=2&question=4" method="post">
+                    <div class="input-zone vba-style">
+                        <pre>=RECHERCHEV(D2; A2:B10; <input type="text" name="answer" placeholder="..." style="width: 40px;"> ; FAUX)</pre>
+                    </div>
+                    <button type="submit" class="submit">Envoyer</button>
+                </form>
             </div>
         </div>
     </div>
-    
+
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

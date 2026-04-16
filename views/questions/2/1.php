@@ -13,24 +13,27 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-1">
+            <div class="step active">
                 <p class="question">Quel mot-clef est utilisé pour définir le début d'un module en VBA ?</p>
-                <div class="options">
-                    <button class="choice" onclick="checkAnswer(this, 1)">Start</button>
-                    <button class="choice" onclick="checkAnswer(this, 1)">Module</button>
-                    <button class="choice" onclick="checkAnswer(this, 1)">Function</button>
-                    <button class="choice" data-correct="true" onclick="checkAnswer(this, 1)">Sub</button>
-                </div>
+                <form action="http://projet.local/index.php?action=check-answer&theme=2&question=1" method="post">
+                    <div class="options">
+                        <label><input type="radio" name="answer" value="ans1">Start</input></label>
+                        <label><input type="radio" name="answer" value="ans2">Module</input></label>
+                        <label><input type="radio" name="answer" value="ans3">Function</input></label>
+                        <label><input type="radio" name="answer" value="ans4">Sub</input></label>
+                        <button type="submit" class="submit">Envoyer</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

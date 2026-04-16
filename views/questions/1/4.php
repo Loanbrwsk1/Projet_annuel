@@ -12,11 +12,11 @@
 </head>
 
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-4">
+            <div class="step active">
                 <p class="question">En PHP, quel est l'opérateur utilisé pour la concaténation (assembler deux chaînes de
                     caractères) ?</p>
                 <form action="http://projet.local/index.php?action=check-answer&theme=1&question=4" method="post">
@@ -33,7 +33,7 @@
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

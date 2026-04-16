@@ -13,7 +13,7 @@
 
 <body>
 
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="logo-account-wrapper">
         <img src="/assets/img/neonquests_account_icon.png" alt="nonquests-account-icon" class="logo-account">
@@ -73,7 +73,7 @@
     </div>
 
     <?php
-    require "views/footer.html";
+    require "views/templates/footer.html";
 
     if (!empty($_SESSION['error'])) {
         echo "<script>

@@ -50,8 +50,11 @@ else if($page == "create"){
 else if($page == "account"){
     DisplayAccount();
 }
-else if($page == "question"){
+else if($page == "question" && (int)$question <= 5){
     DisplayQuestion($theme, $question);
+}
+else if($page == "theme_finished"){
+    DisplayThemeFinished();
 }
 else{
     Display404();
