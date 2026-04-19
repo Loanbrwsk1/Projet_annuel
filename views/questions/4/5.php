@@ -17,24 +17,22 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">5. Échange de valeurs (Permutation)</p>
-                <div class="scenario-box">
-                    Complétez les étapes pour échanger <strong>A</strong> et <strong>B</strong> en utilisant la variable
-                    <strong>Temp</strong>.
-                </div>
-                <form action="http://projet.local/index.php?action=check-answer&theme=4&question=5" method="post">
-                    <div class="input-zone vba-style">
-                        <pre>
+            <p class="question">5. Échange de valeurs (Permutation)</p>
+            <div class="scenario-box">
+                Complétez les étapes pour échanger <strong>A</strong> et <strong>B</strong> en utilisant la variable
+                <strong>Temp</strong>.
+            </div>
+            <form action="/index.php?action=check-answer&theme=4&question=5" method="post">
+                <div class="input-zone vba-style">
+                    <pre>
 A <- 10
 B <- 20
 Temp <- <input type="text" name="answer" required style="width: 45px;" placeholder="?">
 A <- <input type="text" name="answer2" required style="width: 45px;" placeholder="?">
 B <- <input type="text" name="answer3" required style="width: 45px;" placeholder="?"></pre>
-                    </div>
-                    <button type="submit" class="submit">Envoyer</button>
-                </form>
-            </div>
+                </div>
+                <button type="submit" class="submit">Envoyer</button>
+            </form>
         </div>
     </div>
 

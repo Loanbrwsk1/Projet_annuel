@@ -16,15 +16,13 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">1. Convertir le nombre décimal 80 en binaire :</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=6&question=1" method="post">
-                    <div class="input-zone">
-                        <input type="text" name="answer" placeholder="Ex: 0b 0000 1111" autocomplete="off">
-                    </div>
-                    <button type="submit" class="submit">Envoyer</button>
-                </form>
-            </div>
+            <p class="question">1. Convertir le nombre décimal 80 en binaire :</p>
+            <form action="/index.php?action=check-answer&theme=6&question=1" method="post">
+                <div class="input-zone">
+                    <input type="text" name="answer" placeholder="Ex: 0b 0000 1111" autocomplete="off">
+                </div>
+                <button type="submit" class="submit">Envoyer</button>
+            </form>
         </div>
     </div>
 

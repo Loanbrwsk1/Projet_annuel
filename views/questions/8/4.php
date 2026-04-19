@@ -16,16 +16,14 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">Dans une boucle for(let i = 1; i &lt;= 3; i++), combien de fois le code sera-t-il exécuté ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=8&question=4" method="post">
-                    <div class="options">
-                        Ta réponse :
-                        <label><input type="number" name="answer" required style="width:50px"></label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            <p class="question">Dans une boucle for(let i = 1; i &lt;= 3; i++), combien de fois le code sera-t-il exécuté ?</p>
+            <form action="/index.php?action=check-answer&theme=8&question=4" method="post">
+                <div class="options">
+                    Ta réponse :
+                    <label><input type="number" name="answer" required style="width:50px"></label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

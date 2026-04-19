@@ -9,6 +9,9 @@ if(isset($_GET["page"]) && !empty($_GET["page"]) && isset($_SESSION["pseudo"]) &
         $theme = htmlspecialchars($_GET["theme"]);
         $question = htmlspecialchars($_GET["question"]);
     }
+    else if($page == "intro" && (isset($_GET["theme"]) && !empty($_GET["theme"]))){
+        $theme = htmlspecialchars($_GET["theme"]);
+    }
 }
 else{
     $page = "login";
@@ -50,10 +53,13 @@ else if($page == "create"){
 else if($page == "account"){
     DisplayAccount();
 }
+else if($page == "intro"){
+    DisplayIntro($theme);
+}
 else if($page == "question" && (int)$question <= 5){
     DisplayQuestion($theme, $question);
 }
-else if($page == "theme_finished"){
+else if($page == "theme-finished"){
     DisplayThemeFinished();
 }
 else{

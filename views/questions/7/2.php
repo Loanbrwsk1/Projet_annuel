@@ -16,18 +16,16 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">Que trouve-t-on principalement dans le dossier /etc sous Linux ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=7&question=2" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1">Les fichiers temporaires du système</label>
-                        <label><input type="radio" name="answer" value="ans2">Les binaires et exécutables des utilisateurs</label>
-                        <label><input type="radio" name="answer" value="ans3">Les fichiers de configuration du système et des services</label>
-                        <label><input type="radio" name="answer" value="ans4">Les dossiers personnels des utilisateurs (Home)</label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            <p class="question">Que trouve-t-on principalement dans le dossier /etc sous Linux ?</p>
+            <form action="/index.php?action=check-answer&theme=7&question=2" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1">Les fichiers temporaires du système</label>
+                    <label><input type="radio" name="answer" value="ans2">Les binaires et exécutables des utilisateurs</label>
+                    <label><input type="radio" name="answer" value="ans3">Les fichiers de configuration du système et des services</label>
+                    <label><input type="radio" name="answer" value="ans4">Les dossiers personnels des utilisateurs (Home)</label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

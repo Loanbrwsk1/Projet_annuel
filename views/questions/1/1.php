@@ -17,18 +17,16 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">En HTML, quelle est la particularité d'une balise comme &lt;br&gt; ou &lt;img&gt; ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=1&question=1" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1" id="1">Elles doivent obligatoirement être écrites en majuscules.</input></label>
-                        <label><input type="radio" name="answer" value="ans2" id="2">Ce sont des balises dites "solitaires" : elles n'ont pas de balise fermante</input></label>
-                        <label><input type="radio" name="answer" value="ans3" id="3">Elles ne peuvent être utilisées que dans la partie</input></label>
-                        <label><input type="radio" name="answer" value="ans4" id="4">Elles servent uniquement à changer la couleur du texte</input></label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            <p class="question">En HTML, quelle est la particularité d'une balise comme &lt;br&gt; ou &lt;img&gt; ?</p>
+            <form action="/index.php?action=check-answer&theme=1&question=1" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1" id="1">Elles doivent obligatoirement être écrites en majuscules.</input></label>
+                    <label><input type="radio" name="answer" value="ans2" id="2">Ce sont des balises dites "solitaires" : elles n'ont pas de balise fermante</input></label>
+                    <label><input type="radio" name="answer" value="ans3" id="3">Elles ne peuvent être utilisées que dans la partie</input></label>
+                    <label><input type="radio" name="answer" value="ans4" id="4">Elles servent uniquement à changer la couleur du texte</input></label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

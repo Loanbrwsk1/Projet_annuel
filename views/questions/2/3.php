@@ -17,18 +17,16 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">Quel type de variable stocke du texte ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=2&question=3" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1">Integer</input></label>
-                        <label><input type="radio" name="answer" value="ans2">String</input></label>
-                        <label><input type="radio" name="answer" value="ans3">Double</input></label>
-                        <label><input type="radio" name="answer" value="ans4">Boolean</input></label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            <p class="question">Quel type de variable stocke du texte ?</p>
+            <form action="/index.php?action=check-answer&theme=2&question=3" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1">Integer</input></label>
+                    <label><input type="radio" name="answer" value="ans2">String</input></label>
+                    <label><input type="radio" name="answer" value="ans3">Double</input></label>
+                    <label><input type="radio" name="answer" value="ans4">Boolean</input></label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

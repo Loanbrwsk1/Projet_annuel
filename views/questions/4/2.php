@@ -17,18 +17,16 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">Que signifie la "portée des variables" et quelle est la différence entre une variable locale et globale ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=4&question=2" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1">La portée est la zone de visibilité. Une locale n'est visible que dans sa fonction, une globale est visible dans tout le programme.</input></label>
-                        <label><input type="radio" name="answer" value="ans2">La portée est la taille mémoire d'une variable. Une locale est petite, une globale est grande.</input></label>
-                        <label><input type="radio" name="answer" value="ans3">La portée est la durée de vie. Une locale s'efface après 10 lignes, une globale reste toujours.</input></label>
-                        <label><input type="radio" name="answer" value="ans4">La portée est le type de données. Une locale est un texte, une globale est un nombre.</input></label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            <p class="question">Que signifie la "portée des variables" et quelle est la différence entre une variable locale et globale ?</p>
+            <form action="/index.php?action=check-answer&theme=4&question=2" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1">La portée est la zone de visibilité. Une locale n'est visible que dans sa fonction, une globale est visible dans tout le programme.</input></label>
+                    <label><input type="radio" name="answer" value="ans2">La portée est la taille mémoire d'une variable. Une locale est petite, une globale est grande.</input></label>
+                    <label><input type="radio" name="answer" value="ans3">La portée est la durée de vie. Une locale s'efface après 10 lignes, une globale reste toujours.</input></label>
+                    <label><input type="radio" name="answer" value="ans4">La portée est le type de données. Une locale est un texte, une globale est un nombre.</input></label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

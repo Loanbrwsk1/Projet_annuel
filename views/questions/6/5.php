@@ -16,17 +16,15 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">5. Sortie d'une porte AND (A=1, B=0) suivie d'une porte NOT ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=6&question=5" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1">0</label>
-                        <label><input type="radio" name="answer" value="ans2">1</label>
-                        <label><input type="radio" name="answer" value="ans3">Indéterminé</label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            <p class="question">5. Sortie d'une porte AND (A=1, B=0) suivie d'une porte NOT ?</p>
+            <form action="/index.php?action=check-answer&theme=6&question=5" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1">0</label>
+                    <label><input type="radio" name="answer" value="ans2">1</label>
+                    <label><input type="radio" name="answer" value="ans3">Indéterminé</label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

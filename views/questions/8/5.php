@@ -16,16 +16,14 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">Quel opérateur de comparaison stricte vérifie à la fois la valeur ET le type en JavaScript ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=8&question=5" method="post">
-                    <div class="options">
-                        Ta réponse :
-                        <label><input type="text" name="answer" required style="width:70px"></label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            <p class="question">Quel opérateur de comparaison stricte vérifie à la fois la valeur ET le type en JavaScript ?</p>
+            <form action="/index.php?action=check-answer&theme=8&question=5" method="post">
+                <div class="options">
+                    Ta réponse :
+                    <label><input type="text" name="answer" required style="width:70px"></label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

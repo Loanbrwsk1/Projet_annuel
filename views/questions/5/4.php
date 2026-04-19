@@ -16,18 +16,16 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">Quelle est la toute dernière couche du modèle OSI (Couche 7) ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=5&question=4" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1">La couche Physique</label>
-                        <label><input type="radio" name="answer" value="ans2">La couche Application</label>
-                        <label><input type="radio" name="answer" value="ans3">La couche Session</label>
-                        <label><input type="radio" name="answer" value="ans4">La couche Présentation</label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            <p class="question">Quelle est la toute dernière couche du modèle OSI (Couche 7) ?</p>
+            <form action="/index.php?action=check-answer&theme=5&question=4" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1">La couche Physique</label>
+                    <label><input type="radio" name="answer" value="ans2">La couche Application</label>
+                    <label><input type="radio" name="answer" value="ans3">La couche Session</label>
+                    <label><input type="radio" name="answer" value="ans4">La couche Présentation</label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

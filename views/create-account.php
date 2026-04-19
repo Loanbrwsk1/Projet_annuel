@@ -20,7 +20,7 @@ $_SESSION['pseudo'] = "Invite";
         <img src="/assets/img/neonquests_full_logo.svg" alt="neonquests-logo">
     </div>
     <!-- From Uiverse.io by InfinityLoopGames -->
-    <form class="container" action="http://projet.local/index.php?action=check-create" method="post">
+    <form class="container" action="/index.php?action=check-create" method="post">
         <div class="input-container">
             <div class="input-content">
                 <div class="input-dist">
@@ -45,10 +45,10 @@ $_SESSION['pseudo'] = "Invite";
         </div>
     </form>
     <div class="sup-button">
-        <a href="http://projet.local/login">
+        <a href="/login">
             <button class="create-account-button">Se connecter</button>
         </a>
-        <a href="http://projet.local/home">
+        <a href="/home">
             Jouer sans se connecter
         </a>
     </div>

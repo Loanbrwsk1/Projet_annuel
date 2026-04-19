@@ -16,18 +16,16 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">À quoi sert la commande sudo ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=7&question=4" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1">À redémarrer le système immédiatement.</label>
-                        <label><input type="radio" name="answer" value="ans2">À exécuter une commande en tant que root</label>
-                        <label><input type="radio" name="answer" value="ans3">À sécuriser la connexion réseau entre deux serveurs</label>
-                        <label><input type="radio" name="answer" value="ans4">À exécuter une commande en tant qu'un autre utilisateur</label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            <p class="question">À quoi sert la commande sudo ?</p>
+            <form action="/index.php?action=check-answer&theme=7&question=4" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1">À redémarrer le système immédiatement.</label>
+                    <label><input type="radio" name="answer" value="ans2">À exécuter une commande en tant que root</label>
+                    <label><input type="radio" name="answer" value="ans3">À sécuriser la connexion réseau entre deux serveurs</label>
+                    <label><input type="radio" name="answer" value="ans4">À exécuter une commande en tant qu'un autre utilisateur</label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

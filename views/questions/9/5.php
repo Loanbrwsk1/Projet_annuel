@@ -16,19 +16,17 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">5. On veut les produits dont le prix est > à la moyenne. Complète la fonction :</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=9&question=5" method="post">
-                    <div class="input-zone vba-style">
-                        <pre>
+            <p class="question">5. On veut les produits dont le prix est > à la moyenne. Complète la fonction :</p>
+            <form action="/index.php?action=check-answer&theme=9&question=5" method="post">
+                <div class="input-zone vba-style">
+                    <pre>
 SELECT nom FROM Produits 
 WHERE prix > (<input type="text" name="answer"" style="width: 70px;" placeholder="..."> <input type="text" name="answer2" style="width: 60px;" placeholder="...">(prix) 
 FROM Produits)<input type="text" name="answer3" style="width: 30px;" placeholder="...">
         </pre>
-                    </div>
-                    <button type="submit" class="submit">Envoyer</button>
-                </form>
-            </div>
+                </div>
+                <button type="submit" class="submit">Envoyer</button>
+            </form>
         </div>
     </div>
 

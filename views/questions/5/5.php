@@ -16,18 +16,16 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">Sur un routeur Cisco, quelle commande permet d'ajouter une "Route par défaut" pour envoyer tout le trafic inconnu vers l'adresse 192.168.1.254 ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=5&question=5" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1">ip route 255.255.255.255 255.255.255.255 192.168.1.254</label>
-                        <label><input type="radio" name="answer" value="ans2">router default-gateway 192.168.1.254</label>
-                        <label><input type="radio" name="answer" value="ans3">ip route 192.168.1.254 255.255.255.0</label>
-                        <label><input type="radio" name="answer" value="ans4">ip route 0.0.0.0 0.0.0.0 192.168.1.254</label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            <p class="question">Sur un routeur Cisco, quelle commande permet d'ajouter une "Route par défaut" pour envoyer tout le trafic inconnu vers l'adresse 192.168.1.254 ?</p>
+            <form action="/index.php?action=check-answer&theme=5&question=5" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1">ip route 255.255.255.255 255.255.255.255 192.168.1.254</label>
+                    <label><input type="radio" name="answer" value="ans2">router default-gateway 192.168.1.254</label>
+                    <label><input type="radio" name="answer" value="ans3">ip route 192.168.1.254 255.255.255.0</label>
+                    <label><input type="radio" name="answer" value="ans4">ip route 0.0.0.0 0.0.0.0 192.168.1.254</label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

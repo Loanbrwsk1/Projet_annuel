@@ -16,19 +16,17 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">En PHP, quel est l'opérateur utilisé pour la concaténation (assembler deux chaînes de
-                    caractères) ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=1&question=4" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1">.</input></label>
-                        <label><input type="radio" name="answer" value="ans2">+</input></label>
-                        <label><input type="radio" name="answer" value="ans3">&</input></label>
-                        <label><input type="radio" name="answer" value="ans4">*</input></label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            <p class="question">En PHP, quel est l'opérateur utilisé pour la concaténation (assembler deux chaînes de
+                caractères) ?</p>
+            <form action="/index.php?action=check-answer&theme=1&question=4" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1">.</input></label>
+                    <label><input type="radio" name="answer" value="ans2">+</input></label>
+                    <label><input type="radio" name="answer" value="ans3">&</input></label>
+                    <label><input type="radio" name="answer" value="ans4">*</input></label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

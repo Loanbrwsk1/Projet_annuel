@@ -17,17 +17,14 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">5. La structure conditionnelle</p>
-
-                <div class="scenario-box">
-                    <strong>Objectif :</strong> Complétez le code pour que si la note est inférieure à 10, la cellule
-                    affiche "Refusé".
-                </div>
-
-                <form action="http://projet.local/index.php?action=check-answer&theme=2&question=5" method="post">
-                    <div class="input-zone vba-style">
-                        <pre>
+            <p class="question">5. La structure conditionnelle</p>
+            <div class="scenario-box">
+                <strong>Objectif :</strong> Complétez le code pour que si la note est inférieure à 10, la cellule
+                affiche "Refusé".
+            </div>
+            <form action="/index.php?action=check-answer&theme=2&question=5" method="post">
+                <div class="input-zone vba-style">
+                    <pre>
 Sub VerifierNote()
   If Range("A1").Value >= 10 Then
     Range("B1").Value = "Admis"
@@ -35,11 +32,9 @@ Sub VerifierNote()
     Range("B1").Value = "Refusé"
   End If
 End Sub</pre>
-                    </div>
-
-                    <button type="submit" class="submit">Envoyer</button>
-                </form>
-            </div>
+                </div>
+                <button type="submit" class="submit">Envoyer</button>
+            </form>
         </div>
     </div>
 

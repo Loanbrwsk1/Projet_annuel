@@ -16,15 +16,13 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">3. Soustraire ces binaires :<br>0b 1100 0110 - 0b 1011 0100</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=6&question=3" method="post">
-                    <div class="input-zone">
-                        <input type="text" name="answer" placeholder="Ex: 0b 0000 1111" autocomplete="off">
-                    </div>
-                    <button type="submit" class="submit">Envoyer</button>
-                </form>
-            </div>
+            <p class="question">3. Soustraire ces binaires :<br>0b 1100 0110 - 0b 1011 0100</p>
+            <form action="/index.php?action=check-answer&theme=6&question=3" method="post">
+                <div class="input-zone">
+                    <input type="text" name="answer" placeholder="Ex: 0b 0000 1111" autocomplete="off">
+                </div>
+                <button type="submit" class="submit">Envoyer</button>
+            </form>
         </div>
     </div>
 

@@ -17,18 +17,16 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">Quel mot-clef est utilisé pour définir le début d'un module en VBA ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=2&question=1" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1">Start</input></label>
-                        <label><input type="radio" name="answer" value="ans2">Module</input></label>
-                        <label><input type="radio" name="answer" value="ans3">Function</input></label>
-                        <label><input type="radio" name="answer" value="ans4">Sub</input></label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            <p class="question">Quel mot-clef est utilisé pour définir le début d'un module en VBA ?</p>
+            <form action="/index.php?action=check-answer&theme=2&question=1" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1">Start</input></label>
+                    <label><input type="radio" name="answer" value="ans2">Module</input></label>
+                    <label><input type="radio" name="answer" value="ans3">Function</input></label>
+                    <label><input type="radio" name="answer" value="ans4">Sub</input></label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

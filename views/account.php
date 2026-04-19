@@ -27,7 +27,7 @@
             <br>
             <div class="wrapper-button-delete">
                 <button onclick="displayConfirm()" class="non-button button-delete">Non</button>
-                <a href="http://projet.local/index.php?action=delete">
+                <a href="/index.php?action=delete">
                     <button class="oui-button button-delete">Oui</button>
                 </a>
             </div>
@@ -35,7 +35,7 @@
     </div>
 
     <!-- From Uiverse.io by InfinityLoopGames -->
-    <form class="container" action="http://projet.local/index.php?action=change-pwd" method="post">
+    <form class="container" action="/index.php?action=change-pwd" method="post">
         <div class="input-container">
             <div class="input-content">
                 <div class="input-dist">
@@ -65,7 +65,7 @@
         </div>
     </form>
     <div class="sup-button">
-        <a href="http://projet.local/index.php?action=logout">
+        <a href="/index.php?action=logout">
             <button class="create-account-button"><span class="log-out">Se déconnecter</span></button>
         </a>
         <button onclick="displayConfirm()" class="create-account-button"><span class="delete-account">Supprimer mon compte</span></button>

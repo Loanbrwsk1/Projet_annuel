@@ -16,18 +16,16 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">Combien de bits contient une adresse IPv4 standard ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=5&question=1" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1">16 bits</label>
-                        <label><input type="radio" name="answer" value="ans2">32 bits</label>
-                        <label><input type="radio" name="answer" value="ans3">64 bits</label>
-                        <label><input type="radio" name="answer" value="ans4">128 bits</label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            <p class="question">Combien de bits contient une adresse IPv4 standard ?</p>
+            <form action="/index.php?action=check-answer&theme=5&question=1" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1">16 bits</label>
+                    <label><input type="radio" name="answer" value="ans2">32 bits</label>
+                    <label><input type="radio" name="answer" value="ans3">64 bits</label>
+                    <label><input type="radio" name="answer" value="ans4">128 bits</label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

@@ -72,7 +72,44 @@ progress::-webkit-progress-value {
     border-radius: 20px;
 }
 
-.quiz-wrapper {
+.card {
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 12px;
+    border-top: 4px solid rgba(210, 0, 247, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    color: #efefef;
+}
+
+h1 {
+    color: rgba(210, 0, 247, 1);
+    margin-top: 0;
+}
+
+.history {
+    font-size: 0.9rem;
+    color: #aaa;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+}
+
+.content ul {
+    padding-left: 1.2rem;
+    line-height: 1.6;
+}
+
+.center-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li::marker {
+    color: rgba(210, 0, 247, 1);
+}
+
+.quiz-wrapper, .card-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,18 +117,14 @@ progress::-webkit-progress-value {
 }
 
 .quiz-container {
-    background: #212121; 
+    background: #212121;
     padding: 2.5rem;
     border-radius: 15px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     width: 90%;
     max-width: 500px;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1); 
-}
-
-.step.active {
-    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .question {
@@ -111,10 +144,10 @@ progress::-webkit-progress-value {
 
 .submit {
     padding: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.3); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.05); 
-    color: white; 
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 1rem;
@@ -134,7 +167,7 @@ progress::-webkit-progress-value {
 #answer-input-1 {
     background: #333;
     border: 1px solid #444;
-    color: #00ff00; 
+    color: #00ff00;
     padding: 8px 12px;
     border-radius: 4px;
     font-family: 'Courier New', monospace;
@@ -143,9 +176,9 @@ progress::-webkit-progress-value {
 
 .input-zone {
     display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    gap: 15px;             
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
     margin-top: 10px;
 }
 
@@ -156,16 +189,16 @@ progress::-webkit-progress-value {
 }
 
 #answer-input {
-    width: 80%;            
+    width: 80%;
     padding: 10px;
-    text-align: center;    
+    text-align: center;
 }
 
 .vba-style {
     text-align: left;
     background: #1a1a1a;
     padding: 20px;
-    border-left: 4px solid #007bff; 
+    border-left: 4px solid #007bff;
 }
 
 .vba-style pre {
@@ -179,7 +212,7 @@ progress::-webkit-progress-value {
     border: 1px solid #555;
     color: #f1c40f;
     padding: 5px 10px;
-    margin: 10px 0 10px 20px; 
+    margin: 10px 0 10px 20px;
     font-family: 'Consolas', monospace;
     width: 120px;
 }

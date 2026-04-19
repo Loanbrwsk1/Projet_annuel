@@ -16,15 +16,13 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-3">
-                <p class="question">Créez un lien "Contact" vers la page "contact.html":</p>
-                <div class="input-zone">
-                    <p class="code-line">&lt;p&gt;Accueil&lt;/p&gt;</p>
-                    <form action="http://projet.local/index.php?action=check-answer&theme=1&question=3" method="post">
-                        <input type="text" name="answer" id="answer-input" placeholder="Tapez votre code ici..." autocomplete="off">
-                        <button type="submit" class="choice">Envoyer</button>
-                    </form>
-                </div>
+            <p class="question">Créez un lien "Contact" vers la page "contact.html":</p>
+            <div class="input-zone">
+                <p class="code-line">&lt;p&gt;Accueil&lt;/p&gt;</p>
+                <form action="/index.php?action=check-answer&theme=1&question=3" method="post">
+                    <input type="text" name="answer" id="answer-input" placeholder="Tapez votre code ici..." autocomplete="off">
+                    <button type="submit" class="choice">Envoyer</button>
+                </form>
             </div>
         </div>
     </div>

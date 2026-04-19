@@ -17,20 +17,18 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">4. Portée Locale vs Globale</p>
-                <div class="scenario-box" style="font-size: 0.85em;">
-                    Quelle action va provoquer une erreur car la variable n'est pas dans sa portée ?
-                </div>
-                <form action="http://projet.local/index.php?action=check-answer&theme=4&question=4" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1">Action A (Afficher soldeGlobal dans la fonction)</input></label>
-                        <label><input type="radio" name="answer" value="ans2">Action B (Afficher taux dans la fonction)</input></label>
-                        <label><input type="radio" name="answer" value="ans3">Action C (Afficher taux dans le programme principal)</input></label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
+            <p class="question">4. Portée Locale vs Globale</p>
+            <div class="scenario-box" style="font-size: 0.85em;">
+                <p class="question">Quelle action va provoquer une erreur car la variable n'est pas dans sa portée ?</p>
             </div>
+            <form action="/index.php?action=check-answer&theme=4&question=4" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1">Action A (Afficher soldeGlobal dans la fonction)</input></label>
+                    <label><input type="radio" name="answer" value="ans2">Action B (Afficher taux dans la fonction)</input></label>
+                    <label><input type="radio" name="answer" value="ans3">Action C (Afficher taux dans le programme principal)</input></label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

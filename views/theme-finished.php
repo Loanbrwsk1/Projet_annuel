@@ -10,15 +10,16 @@
     <title>Thème fini</title>
 </head>
 <body>
-    <?php require "views/top-bar.html" ?>
+    <?php require "views/templates/top-bar.html" ?>
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            Bravo vous avez fini ce thème !<br>
-            <a href="http://projet.local/home"><button class="submit">Retour au menu home</button></a>
+            Bravo vous avez fini ce thème !
+            <br>
+            <a href="/home"><button class="submit">Retour au menu home</button></a>
         </div>
     </div>
 
-    <?php require "views/footer.html" ?>
+    <?php require "views/templates/footer.html" ?>
 </body>
 </html>

@@ -14,11 +14,11 @@ function CheckConnect()
 {
     require "models/model.php";
     if(Connect()){
-        header("Location: home");
+        header("Location: /home");
         exit();
     }
     else{
-        header("Location: index.php?page=login");
+        header("Location: /login");
         exit();
     }
 }
@@ -39,11 +39,11 @@ function CheckCreate()
 {
     require_once "models/model.php";
     if(Create()){
-        header("location: home");
+        header("location: /home");
         exit();
     }
     else{
-        header("Location: create");
+        header("Location: /create");
         exit();
     }
 }
@@ -53,13 +53,18 @@ function LogOut()
     session_start();
     unset($_SESSION['pseudo']);
     session_destroy();
-    header("location: login");
+    header("location: /login");
     exit();
 }
 
 function DisplayAccount()
 {
     require "views/account.php";
+}
+
+function DisplayIntro($theme)
+{
+    require "views/questions/$theme/intro.php";
 }
 
 function DisplayQuestion($theme, $question)
@@ -69,25 +74,25 @@ function DisplayQuestion($theme, $question)
         require "views/questions/$theme/$question.php";
     }
     else{
-        header("Location: http://projet.local/home");
+        header("Location: /home");
         exit();
     }
 }
 
 function DisplayThemeFinished()
 {
-    require "views/theme_finished.php";
+    require "views/theme-finished.php";
 }
 
 function CheckDelete()
 {
     require_once "models/model.php";
     if(Delete()){
-        header("Location: login");
+        header("Location: /login");
         exit();
     }
     else{
-        header("Location: account");
+        header("Location: /account");
         exit();
     }
 }
@@ -96,7 +101,7 @@ function CheckChangePwd()
 {
     require_once "models/model.php";
     ChangePwd();
-    header("Location: account");
+    header("Location: /account");
     exit();
 }
 
@@ -107,14 +112,17 @@ function CheckAnswer($theme, $question)
     if($result){
         if($question <= 4){
             $question += 1;
-            header("Location: http://projet.local/question/$theme/$question");
+            header("Location: /question/$theme/$question");
+            exit();
         }
         else{
-            header("Location: http://projet.local/theme_finished");
+            header("Location: /theme-finished");
+            exit();
         }
     }
     else{
-        header("Location: question/$theme/$question");
+        header("Location: /question/$theme/$question");
+        exit();
     }
     exit();
 }

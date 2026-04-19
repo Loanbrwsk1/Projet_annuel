@@ -17,21 +17,19 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">3. Variable vs Constante</p>
-                <div class="scenario-box">
-                    <strong>Erreur :</strong> Dans l'algorithme "CalculCercle", une ligne tente de modifier
-                    <strong>PI</strong>. Pourquoi est-ce impossible ?
-                </div>
-                <form action="http://projet.local/index.php?action=check-answer&theme=4&question=3" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1">Parce que PI est un entier</input></label>
-                        <label><input type="radio" name="answer" value="ans2">Parce qu'on ne peut pas modifier une constant</input></label>
-                        <label><input type="radio" name="answer" value="ans3">Parce que le rayon est déjà défini</input></label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
+            <p class="question">3. Variable vs Constante</p>
+            <div class="scenario-box">
+                <strong>Erreur :</strong> Dans l'algorithme "CalculCercle", une ligne tente de modifier
+                <strong>PI</strong>. Pourquoi est-ce impossible ?
             </div>
+            <form action="/index.php?action=check-answer&theme=4&question=3" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1">Parce que PI est un entier</input></label>
+                    <label><input type="radio" name="answer" value="ans2">Parce qu'on ne peut pas modifier une constant</input></label>
+                    <label><input type="radio" name="answer" value="ans3">Parce que le rayon est déjà défini</input></label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

@@ -17,15 +17,13 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">Quelle est la syntaxe pour attribuer la valeur 42 à la cellule B2 ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=2&question=2" method="post">
-                    <div class="input-zone">
-                        <input type="text" name="answer" placeholder="Ex: Range(&quot...&quot).Value = ..." autocomplete="off">
-                    </div>
-                    <button type="submit" class="submit">Envoyer</button>
-                </form>
-            </div>
+            <p class="question">Quelle est la syntaxe pour attribuer la valeur 42 à la cellule B2 ?</p>
+            <form action="/index.php?action=check-answer&theme=2&question=2" method="post">
+                <div class="input-zone">
+                    <input type="text" name="answer" placeholder="Ex: Range(&quot...&quot).Value = ..." autocomplete="off">
+                </div>
+                <button type="submit" class="submit">Envoyer</button>
+            </form>
         </div>
     </div>
 

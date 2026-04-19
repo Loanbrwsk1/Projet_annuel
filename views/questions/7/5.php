@@ -16,18 +16,16 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">Qu'est-ce que git ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=7&question=5" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1">Un outil de versionning open-source pour suivre l'évolution du code</label>
-                        <label><input type="radio" name="answer" value="ans2">Un langage de programmation pour le web</label>
-                        <label><input type="radio" name="answer" value="ans3">Un serveur de base de données relationnelle</label>
-                        <label><input type="radio" name="answer" value="ans4">Un éditeur de texte intégré au terminal Linux</label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            <p class="question">Qu'est-ce que git ?</p>
+            <form action="/index.php?action=check-answer&theme=7&question=5" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1">Un outil de versionning open-source pour suivre l'évolution du code</label>
+                    <label><input type="radio" name="answer" value="ans2">Un langage de programmation pour le web</label>
+                    <label><input type="radio" name="answer" value="ans3">Un serveur de base de données relationnelle</label>
+                    <label><input type="radio" name="answer" value="ans4">Un éditeur de texte intégré au terminal Linux</label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

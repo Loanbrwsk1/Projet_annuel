@@ -16,20 +16,18 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-4">
-                <p class="question">4. Déclarez un 'double' et l'afficher</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=3&question=4" method="post">
-                    <div class="input-zone vba-style">
-                        <pre>
+            <p class="question">4. Déclarez un 'double' et l'afficher</p>
+            <form action="/index.php?action=check-answer&theme=3&question=4" method="post">
+                <div class="input-zone vba-style">
+                    <pre>
 int main() {
     <input type="text" name="answer" required style="width: 70px;"> pi = 3.14;
     printf("Valeur : %<input type="text" name="answer2" required style="width: 40px;">\n", pi)<input type="text" name="answer3" required style="width: 30px;">
     return 0;
 }</pre>
-                    </div>
-                    <button type="submit" class="submit">Envoyer</button>
-                </form>
-            </div>
+                </div>
+                <button type="submit" class="submit">Envoyer</button>
+            </form>
         </div>
     </div>
 

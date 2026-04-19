@@ -16,18 +16,16 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">Format de conversion pour un entier (int) ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=3&question=2" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1">%d</input></label>
-                        <label><input type="radio" name="answer" value="ans2">%f</input></label>
-                        <label><input type="radio" name="answer" value="ans3">%s</input></label>
-                        <label><input type="radio" name="answer" value="ans4">%c</input></label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            <p class="question">Format de conversion pour un entier (int) ?</p>
+            <form action="/index.php?action=check-answer&theme=3&question=2" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1">%d</input></label>
+                    <label><input type="radio" name="answer" value="ans2">%f</input></label>
+                    <label><input type="radio" name="answer" value="ans3">%s</input></label>
+                    <label><input type="radio" name="answer" value="ans4">%c</input></label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

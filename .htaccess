@@ -2,9 +2,7 @@ RewriteEngine On
 
 ErrorDocument 404 /index.php?page=404
 
-RewriteRule ^home$ index.php?page=home [L]
-RewriteRule ^account$ index.php?page=account [L]
-RewriteRule ^login$ index.php?page=login [L]
-RewriteRule ^create$ index.php?page=create [L]
-RewriteRule ^theme_finished$ index.php?page=theme_finished [L]
+RewriteRule ^([a-z]+)$ index.php?page=$1 [L]
+RewriteRule ^theme-finished$ index.php?page=theme-finished [L]
 RewriteRule ^question/([1-9])/([1-5])$ index.php?page=question&theme=$1&question=$2 [L]
+RewriteRule ^question/([1-9])/intro$ index.php?page=intro&theme=$1 [L]

@@ -16,18 +16,16 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">5. Le reste de la division de 17 par 5</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=3&question=5" method="post">
-                    <div class="input-zone vba-style">
-                        <pre>
+            <p class="question">5. Le reste de la division de 17 par 5</p>
+            <form action="/index.php?action=check-answer&theme=3&question=5" method="post">
+                <div class="input-zone vba-style">
+                    <pre>
 int reste;
 reste = 17 <input type="text" name="answer" required style="width: 20px;"> 5; 
 printf(%<input type="text" name="answer2" required style="width: 20px;">, <input type="text" name="answer3" required style="width: 50px;">);</pre>
-                    </div>
-                    <button type="submit" class="submit">Envoyer</button>
-                </form>
-            </div>
+                </div>
+                <button type="submit" class="submit">Envoyer</button>
+            </form>
         </div>
     </div>
 

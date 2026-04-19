@@ -17,18 +17,16 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">Quelle est la différence majeure entre une variable et une constante ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=4&question=1" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1">Une variable prend moins de place en mémoire qu'une constante.</input></label>
-                        <label><input type="radio" name="answer" value="ans2">Une constante peut être modifiée par l'utilisateur, mais pas une variable.</input></label>
-                        <label><input type="radio" name="answer" value="ans3">Les variables sont utilisées uniquement en VBA et les constantes uniquement en C.</input></label>
-                        <label><input type="radio" name="answer" value="ans4">Une variable peut voir sa valeur modifiée, alors qu'une constante garde la même valeur tout au long du programme.</input></label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            <p class="question">Quelle est la différence majeure entre une variable et une constante ?</p>
+            <form action="/index.php?action=check-answer&theme=4&question=1" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1">Une variable prend moins de place en mémoire qu'une constante.</input></label>
+                    <label><input type="radio" name="answer" value="ans2">Une constante peut être modifiée par l'utilisateur, mais pas une variable.</input></label>
+                    <label><input type="radio" name="answer" value="ans3">Les variables sont utilisées uniquement en VBA et les constantes uniquement en C.</input></label>
+                    <label><input type="radio" name="answer" value="ans4">Une variable peut voir sa valeur modifiée, alors qu'une constante garde la même valeur tout au long du programme.</input></label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

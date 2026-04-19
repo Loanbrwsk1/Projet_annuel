@@ -16,18 +16,16 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active" id="step-2">
-                <p class="question">Sur combien de colonnes le système de grille de Bootstrap est-il basé par défaut ?</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=1&question=2" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1">12 colonnes</input></label>
-                        <label><input type="radio" name="answer" value="ans2">6 colonnes</input></label>
-                        <label><input type="radio" name="answer" value="ans3">10 colonnes</input></label>
-                        <label><input type="radio" name="answer" value="ans4">16 colonnes</input></label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            <p class="question">Sur combien de colonnes le système de grille de Bootstrap est-il basé par défaut ?</p>
+            <form action="/index.php?action=check-answer&theme=1&question=2" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1">12 colonnes</input></label>
+                    <label><input type="radio" name="answer" value="ans2">6 colonnes</input></label>
+                    <label><input type="radio" name="answer" value="ans3">10 colonnes</input></label>
+                    <label><input type="radio" name="answer" value="ans4">16 colonnes</input></label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

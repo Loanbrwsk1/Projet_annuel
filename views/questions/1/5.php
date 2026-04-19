@@ -16,20 +16,18 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">5. Créer un cadre autour d'un texte de 2 px et en noir (CSS)</p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=1&question=5" method="post">
-                    <div class="input-zone vba-style">
-                        <pre>
+            <p class="question">5. Créer un cadre autour d'un texte de 2 px et en noir (CSS)</p>
+            <form action="/index.php?action=check-answer&theme=1&question=5" method="post">
+                <div class="input-zone vba-style">
+                    <pre>
 .encadre {
     border: </pre>
-                        <input type="text" name="answer" autocomplete="off">
-                        <pre>
+                    <input type="text" name="answer" autocomplete="off">
+                    <pre>
 }</pre>
-                    </div>
-                    <button type="submit" class="submit">Envoyer</button>
-                </form>
-            </div>
+                </div>
+                <button type="submit" class="submit">Envoyer</button>
+            </form>
         </div>
     </div>
 

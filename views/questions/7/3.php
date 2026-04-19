@@ -16,22 +16,20 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">Quel est le résultat de la commande<br>
-                <pre>
+            <p class="question">Quel est le résultat de la commande<br>
+            <pre>
 echo coucou > /tmp/coucou.txt
                 </pre>
-                </p>
-                <form action="http://projet.local/index.php?action=check-answer&theme=7&question=3" method="post">
-                    <div class="options">
-                        <label><input type="radio" name="answer" value="ans1">Ajoute le mot "coucou" à la fin du fichier sans rien supprimer</label>
-                        <label><input type="radio" name="answer" value="ans2">Affiche le contenu du fichier /tmp/coucou.txt dans le terminal</label>
-                        <label><input type="radio" name="answer" value="ans3">Écrase le contenu du fichier /tmp/coucou.txt et y écrit "coucou"</label>
-                        <label><input type="radio" name="answer" value="ans4">Créé un dossier nommé "coucou" dans le répertoire /tmp</label>
-                        <button type="submit" class="submit">Envoyer</button>
-                    </div>
-                </form>
-            </div>
+            </p>
+            <form action="/index.php?action=check-answer&theme=7&question=3" method="post">
+                <div class="options">
+                    <label><input type="radio" name="answer" value="ans1">Ajoute le mot "coucou" à la fin du fichier sans rien supprimer</label>
+                    <label><input type="radio" name="answer" value="ans2">Affiche le contenu du fichier /tmp/coucou.txt dans le terminal</label>
+                    <label><input type="radio" name="answer" value="ans3">Écrase le contenu du fichier /tmp/coucou.txt et y écrit "coucou"</label>
+                    <label><input type="radio" name="answer" value="ans4">Créé un dossier nommé "coucou" dans le répertoire /tmp</label>
+                    <button type="submit" class="submit">Envoyer</button>
+                </div>
+            </form>
         </div>
     </div>
 

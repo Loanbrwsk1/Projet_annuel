@@ -17,19 +17,17 @@
 
     <div class="quiz-wrapper">
         <div class="quiz-container">
-            <div class="step active">
-                <p class="question">4. Utiliser la fonction RECHERCHEV</p>
-                <div class="scenario-box">
-                    <strong>Scénario :</strong> Trouve le prix de l'article <strong>D2</strong> dans le tableau
-                    <strong>A2:B10</strong>.
-                </div>
-                <form action="http://projet.local/index.php?action=check-answer&theme=2&question=4" method="post">
-                    <div class="input-zone vba-style">
-                        <pre>=RECHERCHEV(D2; A2:B10; <input type="text" name="answer" placeholder="..." style="width: 40px;"> ; FAUX)</pre>
-                    </div>
-                    <button type="submit" class="submit">Envoyer</button>
-                </form>
+            <p class="question">4. Utiliser la fonction RECHERCHEV</p>
+            <div class="scenario-box">
+                <strong>Scénario :</strong> Trouve le prix de l'article <strong>D2</strong> dans le tableau
+                <strong>A2:B10</strong>.
             </div>
+            <form action="/index.php?action=check-answer&theme=2&question=4" method="post">
+                <div class="input-zone vba-style">
+                    <pre>=RECHERCHEV(D2; A2:B10; <input type="text" name="answer" placeholder="..." style="width: 40px;"> ; FAUX)</pre>
+                </div>
+                <button type="submit" class="submit">Envoyer</button>
+            </form>
         </div>
     </div>
 

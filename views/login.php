@@ -21,7 +21,7 @@ $_SESSION['progress'] = 0;
         <img src="/assets/img/neonquests_full_logo.svg" alt="neonquests-logo">
     </div>
     <!-- From Uiverse.io by InfinityLoopGames -->
-    <form class="container" action="http://projet.local/index.php?action=check-connect" method="post">
+    <form class="container" action="index.php?action=check-connect" method="post">
         <div class="input-container">
             <div class="input-content">
                 <div class="input-dist">
@@ -40,10 +40,10 @@ $_SESSION['progress'] = 0;
         </div>
     </form>
     <div class="sup-button">
-        <a href="http://projet.local/create">
+        <a href="create">
             <button class="create-account-button">Créer un compte</button>
         </a>
-        <a href="http://projet.local/home">
+        <a href="home">
             Jouer sans se connecter
         </a>
     </div>
