@@ -19,11 +19,10 @@
             <p class="question">Combien de bits contient une adresse IPv4 standard ?</p>
             <form action="/index.php?action=check-answer&theme=5&question=1" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">16 bits</label>
-                    <label><input type="radio" name="answer" value="ans2">32 bits</label>
-                    <label><input type="radio" name="answer" value="ans3">64 bits</label>
-                    <label><input type="radio" name="answer" value="ans4">128 bits</label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">16 bits</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">32 bits</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">64 bits</button>
+                    <button type="submit" name="answer" value="ans4" class="choice">128 bits</button>
                 </div>
             </form>
         </div>

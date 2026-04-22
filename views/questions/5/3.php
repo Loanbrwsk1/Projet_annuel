@@ -30,11 +30,10 @@ login local
             </p>
             <form action="/index.php?action=check-answer&theme=5&question=3" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">domain-name ; vty ; rsa</label>
-                    <label><input type="radio" name="answer" value="ans2">domain name ; vty ; rsa</label>
-                    <label><input type="radio" name="answer" value="ans3">domain-name ; rsa ; vty</label>
-                    <label><input type="radio" name="answer" value="ans4">name domaine ; rsa ; vty</label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">domain-name ; vty ; rsa</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">domain name ; vty ; rsa</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">domain-name ; rsa ; vty</button>
+                    <button type="submit" name="answer" value="ans4" class="choice">name domaine ; rsa ; vty</button>
                 </div>
             </form>
         </div>

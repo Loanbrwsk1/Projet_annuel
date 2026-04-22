@@ -19,11 +19,10 @@
             <p class="question">Sur combien de colonnes le système de grille de Bootstrap est-il basé par défaut ?</p>
             <form action="/index.php?action=check-answer&theme=1&question=2" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">12 colonnes</input></label>
-                    <label><input type="radio" name="answer" value="ans2">6 colonnes</input></label>
-                    <label><input type="radio" name="answer" value="ans3">10 colonnes</input></label>
-                    <label><input type="radio" name="answer" value="ans4">16 colonnes</input></label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">12 colonnes</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">6 colonnes</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">10 colonnes</button>
+                    <button type="submit" name="answer" value="ans4" class="choice">16 colonnes</button>
                 </div>
             </form>
         </div>

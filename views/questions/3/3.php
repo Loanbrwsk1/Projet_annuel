@@ -19,9 +19,8 @@
             <p class="question">3. Résultat numérique de : (5 > 10) ?</p>
             <form action="/index.php?action=check-answer&theme=3&question=3" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">0</label>
-                    <label><input type="radio" name="answer" value="ans2">1</label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">0</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">1</button>
                 </div>
             </form>
         </div>

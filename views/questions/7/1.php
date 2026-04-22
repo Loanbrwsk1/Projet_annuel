@@ -19,11 +19,10 @@
             <p class="question">Quel est le résultat de la commande ls -al ?</p>
             <form action="/index.php?action=check-answer&theme=7&question=1" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">Afficher tous les fichiers y compris cachés de façon détaillée</label>
-                    <label><input type="radio" name="answer" value="ans2">Affiche uniquement les fichiers cachés du répertoire</label>
-                    <label><input type="radio" name="answer" value="ans3">Supprime tous les fichiers du répertoire courant</label>
-                    <label><input type="radio" name="answer" value="ans4">Liste les fichiers par ordre alphabétique inversé</label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">Afficher tous les fichiers y compris cachés de façon détaillée</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">Affiche uniquement les fichiers cachés du répertoire</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">Supprime tous les fichiers du répertoire courant</button>
+                    <button type="submit" name="answer" value="ans4" class="choice">Liste les fichiers par ordre alphabétique inversé</button>
                 </div>
             </form>
         </div>

@@ -20,11 +20,10 @@
             <p class="question">Quel type de variable stocke du texte ?</p>
             <form action="/index.php?action=check-answer&theme=2&question=3" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">Integer</input></label>
-                    <label><input type="radio" name="answer" value="ans2">String</input></label>
-                    <label><input type="radio" name="answer" value="ans3">Double</input></label>
-                    <label><input type="radio" name="answer" value="ans4">Boolean</input></label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">Integer</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">String</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">Double</button>
+                    <button type="submit" name="answer" value="ans4" class="choice">Boolean</button>
                 </div>
             </form>
         </div>

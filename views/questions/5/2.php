@@ -20,11 +20,10 @@
                 "Utilisateur" (>) au mode "Privilégié" (#) ?</p>
             <form action="/index.php?action=check-answer&theme=5&question=2" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">enable</label>
-                    <label><input type="radio" name="answer" value="ans2">system-view</label>
-                    <label><input type="radio" name="answer" value="ans3">configure terminal</label>
-                    <label><input type="radio" name="answer" value="ans4">login privileged</label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">enable</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">system-view</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">configure terminal</button>
+                    <button type="submit" name="answer" value="ans4" class="choice">login privileged</button>
                 </div>
             </form>
         </div>

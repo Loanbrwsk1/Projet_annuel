@@ -19,11 +19,10 @@
             <p class="question">4. Quelle est la règle de sortie d'une porte logique XNOR ?</p>
             <form action="/index.php?action=check-answer&theme=6&question=4" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">Sortie à 1 si au moins une entrée est à 1</label>
-                    <label><input type="radio" name="answer" value="ans2">Sortie à 1 si les entrées sont différentes</label>
-                    <label><input type="radio" name="answer" value="ans3">Sortie à 1 si les entrées sont identiques (0-0 ou 1-1)</label>
-                    <label><input type="radio" name="answer" value="ans4">Sortie toujours inverse de l'entrée A</label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">Sortie à 1 si au moins une entrée est à 1</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">Sortie à 1 si les entrées sont différentes</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">Sortie à 1 si les entrées sont identiques (0-0 ou 1-1)</button>
+                    <button type="submit" name="answer" value="ans4" class="choice">Sortie toujours inverse de l'entrée A</button>
                 </div>
             </form>
         </div>

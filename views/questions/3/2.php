@@ -19,11 +19,10 @@
             <p class="question">Format de conversion pour un entier (int) ?</p>
             <form action="/index.php?action=check-answer&theme=3&question=2" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">%d</input></label>
-                    <label><input type="radio" name="answer" value="ans2">%f</input></label>
-                    <label><input type="radio" name="answer" value="ans3">%s</input></label>
-                    <label><input type="radio" name="answer" value="ans4">%c</input></label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">%d</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">%f</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">%s</button>
+                    <button type="submit" name="answer" value="ans4" class="choice">%c</button>
                 </div>
             </form>
         </div>

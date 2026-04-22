@@ -142,15 +142,19 @@ li::marker {
     margin-top: 20px;
 }
 
-.submit {
+.choice, .submit {
     padding: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgb(142, 142, 142);
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.05);
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 1rem;
+}
+
+.choice:active {
+    background: linear-gradient(90deg, rgba(0, 154, 214, 1) 0%, rgba(39, 64, 163, 1) 50%, rgba(210, 0, 247, 1) 100%);
 }
 
 .input-zone {

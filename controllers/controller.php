@@ -124,5 +124,4 @@ function CheckAnswer($theme, $question)
         header("Location: /question/$theme/$question");
         exit();
     }
-    exit();
 }

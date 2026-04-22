@@ -19,11 +19,10 @@
             <p class="question">Quelle est la toute dernière couche du modèle OSI (Couche 7) ?</p>
             <form action="/index.php?action=check-answer&theme=5&question=4" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">La couche Physique</label>
-                    <label><input type="radio" name="answer" value="ans2">La couche Application</label>
-                    <label><input type="radio" name="answer" value="ans3">La couche Session</label>
-                    <label><input type="radio" name="answer" value="ans4">La couche Présentation</label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">La couche Physique</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">La couche Application</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">La couche Session</button>
+                    <button type="submit" name="answer" value="ans4" class="choice">La couche Présentation</button>
                 </div>
             </form>
         </div>

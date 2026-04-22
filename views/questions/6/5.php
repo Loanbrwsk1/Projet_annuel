@@ -19,10 +19,9 @@
             <p class="question">5. Sortie d'une porte AND (A=1, B=0) suivie d'une porte NOT ?</p>
             <form action="/index.php?action=check-answer&theme=6&question=5" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">0</label>
-                    <label><input type="radio" name="answer" value="ans2">1</label>
-                    <label><input type="radio" name="answer" value="ans3">Indéterminé</label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">0</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">1</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">Indéterminé</button>
                 </div>
             </form>
         </div>

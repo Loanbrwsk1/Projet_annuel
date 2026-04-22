@@ -19,11 +19,10 @@
             <p class="question">Que trouve-t-on principalement dans le dossier /etc sous Linux ?</p>
             <form action="/index.php?action=check-answer&theme=7&question=2" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">Les fichiers temporaires du système</label>
-                    <label><input type="radio" name="answer" value="ans2">Les binaires et exécutables des utilisateurs</label>
-                    <label><input type="radio" name="answer" value="ans3">Les fichiers de configuration du système et des services</label>
-                    <label><input type="radio" name="answer" value="ans4">Les dossiers personnels des utilisateurs (Home)</label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">Les fichiers temporaires du système</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">Les binaires et exécutables des utilisateurs</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">Les fichiers de configuration du système et des services</button>
+                    <button type="submit" name="answer" value="ans4" class="choice">Les dossiers personnels des utilisateurs (Home)</button>
                 </div>
             </form>
         </div>

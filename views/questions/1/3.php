@@ -21,7 +21,7 @@
                 <p class="code-line">&lt;p&gt;Accueil&lt;/p&gt;</p>
                 <form action="/index.php?action=check-answer&theme=1&question=3" method="post">
                     <input type="text" name="answer" id="answer-input" placeholder="Tapez votre code ici..." autocomplete="off">
-                    <button type="submit" class="choice">Envoyer</button>
+                    <button type="submit" class="submit">Envoyer</button>
                 </form>
             </div>
         </div>

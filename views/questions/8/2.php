@@ -19,11 +19,10 @@
             <p class="question">Quel mot-clé est utilisé pour déclarer une variable dont la valeur ne changera jamais ?</p>
             <form action="/index.php?action=check-answer&theme=8&question=2" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">var</label>
-                    <label><input type="radio" name="answer" value="ans2">let</label>
-                    <label><input type="radio" name="answer" value="ans3">function</label>
-                    <label><input type="radio" name="answer" value="ans4">const</label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">var</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">let</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">function</button>
+                    <button type="submit" name="answer" value="ans4" class="choice">const</button>
                 </div>
             </form>
         </div>

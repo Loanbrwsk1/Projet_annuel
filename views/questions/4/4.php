@@ -23,10 +23,9 @@
             </div>
             <form action="/index.php?action=check-answer&theme=4&question=4" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">Action A (Afficher soldeGlobal dans la fonction)</input></label>
-                    <label><input type="radio" name="answer" value="ans2">Action B (Afficher taux dans la fonction)</input></label>
-                    <label><input type="radio" name="answer" value="ans3">Action C (Afficher taux dans le programme principal)</input></label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">Action A (Afficher soldeGlobal dans la fonction)</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">Action B (Afficher taux dans la fonction)</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">Action C (Afficher taux dans le programme principal)</button>
                 </div>
             </form>
         </div>

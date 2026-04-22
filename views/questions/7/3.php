@@ -23,11 +23,10 @@ echo coucou > /tmp/coucou.txt
             </p>
             <form action="/index.php?action=check-answer&theme=7&question=3" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">Ajoute le mot "coucou" à la fin du fichier sans rien supprimer</label>
-                    <label><input type="radio" name="answer" value="ans2">Affiche le contenu du fichier /tmp/coucou.txt dans le terminal</label>
-                    <label><input type="radio" name="answer" value="ans3">Écrase le contenu du fichier /tmp/coucou.txt et y écrit "coucou"</label>
-                    <label><input type="radio" name="answer" value="ans4">Créé un dossier nommé "coucou" dans le répertoire /tmp</label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">Ajoute le mot "coucou" à la fin du fichier sans rien supprimer</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">Affiche le contenu du fichier /tmp/coucou.txt dans le terminal</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">Écrase le contenu du fichier /tmp/coucou.txt et y écrit "coucou"</button>
+                    <button type="submit" name="answer" value="ans4" class="choice">Créé un dossier nommé "coucou" dans le répertoire /tmp</button>
                 </div>
             </form>
         </div>

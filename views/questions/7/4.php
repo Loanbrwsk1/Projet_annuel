@@ -19,11 +19,10 @@
             <p class="question">À quoi sert la commande sudo ?</p>
             <form action="/index.php?action=check-answer&theme=7&question=4" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">À redémarrer le système immédiatement.</label>
-                    <label><input type="radio" name="answer" value="ans2">À exécuter une commande en tant que root</label>
-                    <label><input type="radio" name="answer" value="ans3">À sécuriser la connexion réseau entre deux serveurs</label>
-                    <label><input type="radio" name="answer" value="ans4">À exécuter une commande en tant qu'un autre utilisateur</label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">À redémarrer le système immédiatement.</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">À exécuter une commande en tant que root</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">À sécuriser la connexion réseau entre deux serveurs</button>
+                    <button type="submit" name="answer" value="ans4" class="choice">À exécuter une commande en tant qu'un autre utilisateur</button>
                 </div>
             </form>
         </div>

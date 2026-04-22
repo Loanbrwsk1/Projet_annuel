@@ -19,11 +19,10 @@
             <p class="question">Par quel symbole doit obligatoirement se terminer chaque instruction en C ?</p>
             <form action="/index.php?action=check-answer&theme=3&question=1" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">.</input></label>
-                    <label><input type="radio" name="answer" value="ans2">:</input></label>
-                    <label><input type="radio" name="answer" value="ans3">;</input></label>
-                    <label><input type="radio" name="answer" value="ans4">!</input></label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">.</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">:</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">;</button>
+                    <button type="submit" name="answer" value="ans4" class="choice">!</button>
             </form>
         </div>
     </div>

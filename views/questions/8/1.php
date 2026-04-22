@@ -19,11 +19,10 @@
             <p class="question">En JavaScript, quelle est la syntaxe correcte pour afficher un message d'alerte dans le navigateur ?</p>
             <form action="/index.php?action=check-answer&theme=8&question=1" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">alertBox("Bonjour");</label>
-                    <label><input type="radio" name="answer" value="ans2">alert("Bonjour");</label>
-                    <label><input type="radio" name="answer" value="ans3">console.log("Bonjour");</label>
-                    <label><input type="radio" name="answer" value="ans4">msg("Bonjour");</label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">alertBox("Bonjour");</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">alert("Bonjour");</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">console.log("Bonjour");</button>
+                    <button type="submit" name="answer" value="ans4" class="choice">msg("Bonjour");</button>
                 </div>
             </form>
         </div>

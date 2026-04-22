@@ -179,15 +179,14 @@ function ChangePwd()
     $result->execute();
     $datas = $result->fetch();
 
-    $actual_pwd_db = $datas['password'];
+    $actual_pwd_db = htmlspecialchars($datas['password']);
 
     $result->closeCursor();
 
-    $SQL = 'UPDATE user SET password = ? WHERE pseudo = ?';
-    $result = $DB->prepare($SQL);
-
     if($_SESSION['pseudo'] != "Invité"){
         if(password_verify($actual_pwd, $actual_pwd_db) && $password == $confirm_password){
+            $SQL = 'UPDATE user SET password = ? WHERE pseudo = ?';
+            $result = $DB->prepare($SQL);
             $result->bindValue(1, password_hash($password, PASSWORD_BCRYPT));
             $result->bindValue(2, $_SESSION['pseudo']);
             $result->execute();

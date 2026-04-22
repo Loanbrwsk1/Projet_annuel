@@ -20,11 +20,10 @@
             <p class="question">Quel mot-clef est utilisé pour définir le début d'un module en VBA ?</p>
             <form action="/index.php?action=check-answer&theme=2&question=1" method="post">
                 <div class="options">
-                    <label><input type="radio" name="answer" value="ans1">Start</input></label>
-                    <label><input type="radio" name="answer" value="ans2">Module</input></label>
-                    <label><input type="radio" name="answer" value="ans3">Function</input></label>
-                    <label><input type="radio" name="answer" value="ans4">Sub</input></label>
-                    <button type="submit" class="submit">Envoyer</button>
+                    <button type="submit" name="answer" value="ans1" class="choice">Start</button>
+                    <button type="submit" name="answer" value="ans2" class="choice">Module</button>
+                    <button type="submit" name="answer" value="ans3" class="choice">Function</button>
+                    <button type="submit" name="answer" value="ans4" class="choice">Sub</button>
                 </div>
             </form>
         </div>
