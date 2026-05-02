@@ -48,7 +48,7 @@ $_SESSION['pseudo'] = "Invite";
         <a href="/login">
             <button class="create-account-button">Se connecter</button>
         </a>
-        <a href="/home">
+        <a href="/introduction">
             Jouer sans se connecter
         </a>
     </div>

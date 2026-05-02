@@ -53,6 +53,9 @@ else if($page == "create"){
 else if($page == "account"){
     DisplayAccount();
 }
+else if($page == "introduction"){
+    DisplayIntroduction();
+}
 else if($page == "intro"){
     DisplayIntro($theme);
 }
@@ -61,6 +64,9 @@ else if($page == "question" && (int)$question <= 5){
 }
 else if($page == "theme-finished"){
     DisplayThemeFinished();
+}
+else if($page == "finished"){
+    DisplayFinished();
 }
 else{
     Display404();

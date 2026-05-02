@@ -92,6 +92,15 @@ function Create()
     $password = htmlspecialchars($_POST['password']);
     $confirm_password = htmlspecialchars($_POST['confirm-password']);
 
+    if(empty($username)){
+        $_SESSION["error"] = "Le pseudo ne peut pas être vide !";
+        return 0;
+    }
+    if(empty($password)){
+        $_SESSION["error"] = "Le mot de passe ne peut pas être vide !";
+        return 0;
+    }
+
     $SQL = 'SELECT pseudo FROM user WHERE pseudo = ?';
     $result = $DB->prepare($SQL);
     $result->bindValue(1, $username);

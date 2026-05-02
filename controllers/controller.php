@@ -27,6 +27,10 @@ function DisplayHome()
 {
     require_once "models/model.php";
     GetDisabledButton();
+    if($_SESSION["progress"] == 100){
+        header("Location: /finished");
+        exit();
+    }
     require "views/home.php";
 }
 
@@ -35,11 +39,16 @@ function DisplayCreate()
     require "views/create-account.php";
 }
 
+function DisplayFinished()
+{
+    require "views/finished.php";
+}
+
 function CheckCreate()
 {
     require_once "models/model.php";
     if(Create()){
-        header("location: /home");
+        header("location: /introduction");
         exit();
     }
     else{
@@ -60,6 +69,11 @@ function LogOut()
 function DisplayAccount()
 {
     require "views/account.php";
+}
+
+function displayIntroduction()
+{
+    require "views/intro.php";
 }
 
 function DisplayIntro($theme)

@@ -51,7 +51,7 @@ for($i = 1 ; $i <= 9 ; $i++){
         <a href="create">
             <button class="create-account-button">Créer un compte</button>
         </a>
-        <a href="home">
+        <a href="/introduction">
             Jouer sans se connecter
         </a>
     </div>
