@@ -41,6 +41,7 @@ for($i = 1 ; $i <= 9 ; $i++){
                                 <i class="fa-solid fa-eye"></i>
                             </button>
                         </div>
+                        <label><input type="checkbox" name="stay-connected" id="stay-connected">Rester connecté</label>
                         <button class="submit">Se connecter</button>
                     </div>
                 </div>

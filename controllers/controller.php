@@ -62,6 +62,8 @@ function LogOut()
     session_start();
     unset($_SESSION['pseudo']);
     session_destroy();
+    setcookie("token", "", time() - 3600);
+    unset($_COOKIE["token"]);
     header("location: /login");
     exit();
 }
@@ -102,6 +104,9 @@ function CheckDelete()
 {
     require_once "models/model.php";
     if(Delete()){
+        unset($_SESSION["username"]);
+        setcookie("token", "", time() - 3600);
+        unset($_COOKIE["token"]);
         header("Location: /login");
         exit();
     }
@@ -138,4 +143,22 @@ function CheckAnswer($theme, $question)
         header("Location: /question/$theme/$question");
         exit();
     }
+}
+
+function AutoLogin()
+{
+    require_once "models/model.php";
+    if(GetAutoLogin()){
+        header("Location: /home");
+        exit();
+    }
+    else{
+        LogOut();
+    }
+}
+
+function RedirectHome()
+{
+    header("Location: /home");
+    exit();
 }

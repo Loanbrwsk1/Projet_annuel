@@ -58,6 +58,7 @@ function Connect()
     global $DB;
     $username = htmlspecialchars($_POST['pseudo']);
     $password = htmlspecialchars($_POST['password']);
+    $stay_connected = htmlspecialchars($_POST["stay-connected"]);
 
     $SQL = 'SELECT pseudo, password, progress FROM user WHERE pseudo = ?';
     $result = $DB->prepare($SQL);
@@ -73,6 +74,11 @@ function Connect()
     if($username == $username_db && password_verify($password, $password_db)){
         $_SESSION['pseudo'] = $username_db;
         $_SESSION['progress'] = $progress_db;
+        UpdateToken();
+        if($stay_connected != "on"){
+            setcookie("token", "", time() - 3600);
+            unset($_COOKIE["token"]);
+        }
         return 1;
     }
     else if($username != $username_db){
@@ -91,6 +97,7 @@ function Create()
     $username = htmlspecialchars($_POST['pseudo']);
     $password = htmlspecialchars($_POST['password']);
     $confirm_password = htmlspecialchars($_POST['confirm-password']);
+    $stay_connected = htmlspecialchars($_POST["stay-connected"]);
 
     if(empty($username)){
         $_SESSION["error"] = "Le pseudo ne peut pas être vide !";
@@ -111,7 +118,7 @@ function Create()
     $result->closeCursor();
     
     if(empty($username_db) && $password == $confirm_password && $username != "Invité"){
-        $SQL = 'INSERT INTO user(pseudo, password, progress) VALUES (?, ?, 0)';
+        $SQL = 'INSERT INTO user(pseudo, password, progress, token) VALUES (?, ?, 0, "")';
         $result = $DB->prepare($SQL);
         $result->bindValue(1, $username);
         $result->bindValue(2, password_hash($password, PASSWORD_BCRYPT));
@@ -134,6 +141,12 @@ function Create()
 
         $_SESSION['pseudo'] = $username;
         $_SESSION['progress'] = 0;
+
+        UpdateToken();
+        if($stay_connected != "on"){
+            setcookie("token", "", time() - 3600);
+            unset($_COOKIE["token"]);
+        }
         return 1;
     }
     else if(!empty($username_db)){
@@ -314,4 +327,47 @@ function CheckAnswerDB($theme, $question)
         }
         return 0;
     }
+}
+
+function UpdateToken()
+{
+    global $DB;
+    $_SESSION["token"] = bin2hex(random_bytes(32));
+
+    $SQL = 'UPDATE user SET token = ? WHERE pseudo = ?';
+    $result = $DB->prepare($SQL);
+    $result->bindValue(1, htmlspecialchars($_SESSION["token"]));
+    $result->bindValue(2, htmlspecialchars($_SESSION["pseudo"]));
+    $result->execute();
+    $result->closeCursor();
+    $expire = time() + 365 * 24 * 60 * 60;
+    $options = [
+        'expires'  => $expire,
+        'path'     => '/',
+        'secure'   => false
+    ];
+    setcookie("token", $_SESSION["token"], $options);
+}
+
+function GetAutoLogin()
+{
+    global $DB;
+
+    $SQL = 'SELECT pseudo, progress FROM user WHERE token = ?';
+    $result = $DB->prepare($SQL);
+    $result->bindValue(1, htmlspecialchars($_COOKIE["token"]));
+    $result->execute();
+    $datas = $result->fetch();
+    
+    $_SESSION["pseudo"] = htmlspecialchars($datas["pseudo"]);
+    $_SESSION["bankroll"] = htmlspecialchars($datas["bankroll"]);
+    $_SESSION["admin_access"] = htmlspecialchars($datas["admin_access"]);
+    $result->closeCursor();
+
+    if(empty($_SESSION["pseudo"])){
+        return 0;
+    }
+
+    UpdateToken();
+    return 1;
 }

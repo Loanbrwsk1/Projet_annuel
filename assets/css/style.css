@@ -310,6 +310,67 @@ img {
     }
 }
 
+/* ── Stay connected checkbox ────────────────────────────────── */
+.input-type label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: hsla(192, 100%, 88%, 0.7);
+    transition: color 0.3s;
+    user-select: none;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.input-type label:hover {
+    color: hsl(192, 100%, 88%);
+}
+
+.input-type input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    background: transparent;
+    border: 1px solid hsl(221, 26%, 43%);
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
+    clip-path: polygon(0 0, 85% 0%, 100% 15%, 100% 100%, 0 100%);
+}
+
+.input-type input[type="checkbox"]:hover {
+    border-color: hsl(192, 100%, 75%);
+    box-shadow: 0 0 6px rgba(102, 224, 255, 0.4);
+}
+
+.input-type input[type="checkbox"]:checked {
+    background: linear-gradient(135deg, rgba(64, 144, 181, 0.5), rgba(102, 224, 255, 0.3));
+    border-color: hsl(192, 100%, 80%);
+    box-shadow: 0 0 10px rgba(102, 224, 255, 0.5);
+}
+
+.input-type input[type="checkbox"]::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 3px;
+    width: 5px;
+    height: 8px;
+    border-right: 2px solid hsl(192, 100%, 88%);
+    border-bottom: 2px solid hsl(192, 100%, 88%);
+    transform: rotate(45deg) scale(0);
+    transition: transform 0.2s ease;
+}
+
+.input-type input[type="checkbox"]:checked::after {
+    transform: rotate(45deg) scale(1);
+}
+
 .create-account-button {
     width: 200px;
     margin-bottom: 20px;
@@ -345,4 +406,65 @@ img {
 
 .page-not-found{
     font-size: 65px;
+}
+
+/* ── Page 404 Styles ───────────────────────────────────────── */
+
+.page-not-found-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    z-index: 10;
+}
+
+.error-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.page-not-found {
+    font-size: clamp(80px, 15vw, 150px); /* Taille adaptative */
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+    /* Effet de néon bleu et rose */
+    text-shadow: 
+        0 0 10px #0495cf,
+        0 0 20px #0495cf,
+        0 0 40px #d200f7,
+        0 0 80px #d200f7;
+    animation: neonFlicker 2s infinite alternate;
+    margin: 0;
+}
+
+.error-message {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: hsla(192, 100%, 88%, 0.8);
+    margin-bottom: 30px;
+    max-width: 80%;
+}
+
+/* Animation de scintillement style néon défectueux */
+@keyframes neonFlicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 
+            0 0 10px #0495cf,
+            0 0 20px #0495cf,
+            0 0 40px #d200f7,
+            0 0 80px #d200f7;
+        opacity: 1;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+        opacity: 0.5;
+    }
 }

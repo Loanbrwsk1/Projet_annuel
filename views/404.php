@@ -17,7 +17,11 @@
     </div>
 
     <div class="page-not-found-container">
-        <h1 class="page-not-found">Erreur 404 : URL Not Found</h2>
+        <div class="error-content">
+            <h1 class="page-not-found">404</h1>
+            <p class="error-message">Oups ! La page que vous cherchez s'est perdue dans le cyberespace.</p>
+            <a href="/login" class="submit">Retourner à l'accueil</a>
+        </div>
     </div>
 </body>
 

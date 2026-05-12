@@ -3,9 +3,16 @@ session_start();
 
 require "controllers/controller.php";
 
+if(!isset($_SESSION["pseudo"]) && empty($_SESSION["pseudo"]) && isset($_COOKIE["token"]) && !empty($_COOKIE["token"])){
+    AutoLogin();
+}
+
 if(isset($_GET["page"]) && !empty($_GET["page"]) && isset($_SESSION["pseudo"]) && !empty($_SESSION["pseudo"])){
     $page = htmlspecialchars($_GET["page"]);
-    if($page == "question" && (isset($_GET["theme"]) && !empty($_GET["theme"]) && isset($_GET["question"]) && !empty($_GET["question"]))){
+    if(($page == "login" || $page == "create") && isset($_SESSION["pseudo"])){
+        RedirectHome();
+    }
+    else if($page == "question" && (isset($_GET["theme"]) && !empty($_GET["theme"]) && isset($_GET["question"]) && !empty($_GET["question"]))){
         $theme = htmlspecialchars($_GET["theme"]);
         $question = htmlspecialchars($_GET["question"]);
     }

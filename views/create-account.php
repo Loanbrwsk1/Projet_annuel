@@ -38,6 +38,7 @@ $_SESSION['pseudo'] = "Invite";
                                 <i class="fa-solid fa-eye"></i>
                             </button>
                         </div>
+                        <label><input type="checkbox" name="stay-connected" id="stay-connected">Rester connecté</label>
                         <button class="submit">Créer un compte</button>
                     </div>
                 </div>
