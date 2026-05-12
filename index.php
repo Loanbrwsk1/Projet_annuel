@@ -21,6 +21,9 @@ if(isset($_GET["page"]) && !empty($_GET["page"]) && isset($_SESSION["pseudo"]) &
     }
 }
 else{
+    if(isset($_SESSION["pseudo"]) && !empty($_SESSION["pseudo"]) && !isset($_GET["action"]) && empty($_GET["action"])){
+        RedirectHome();
+    }
     $page = "login";
 }
 
