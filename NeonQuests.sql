@@ -33,7 +33,7 @@ CREATE TABLE `answers` (
   `question` int(50) NOT NULL,
   `answer` varchar(255) DEFAULT NULL,
   `gain` int(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `answers`
